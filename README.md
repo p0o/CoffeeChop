@@ -1,20 +1,14 @@
-# Foundation Compass Template
+# CoffeeChop
 
-The easiest way to get started with Foundation + Compass.
+A very simple angularJS SPA for small online shoppings.
 
-## Requirements
+## Libraries
 
-  * Ruby 1.9+
-  * [Node.js](http://nodejs.org)
-  * [compass](http://compass-style.org/): `gem install compass`
-  * [bower](http://bower.io): `npm install bower -g`
+  * Zurb Foundation
+  * Angular JS
 
 ## Quickstart
 
-  * [Download this starter compass project and unzip it](https://github.com/zurb/foundation-compass-template/archive/master.zip)
-  * Run `bower install` to install the latest version of Foundation
-  
-Then when you're working on your project, just run the following command:
 
 ```bash
 bundle exec compass watch
