@@ -1,0 +1,26 @@
+// CoffeeChop styles
+$cc-white: #fff;
+$cc-gray: #eee;
+$cc-black: #000;
+
+// global settings
+$body-bg: $cc-gray !default;
+
+// grid settings
+$row-width: rem-calc(1200);
+
+// top-bar settings
+$topbar-bg-color: $cc-white;
+$topbar-bg: $cc-white;
+$topbar-link-color: $cc-black;
+$topbar-link-color-hover: $cc-black !default;
+$topbar-height: rem-calc(70);
+$topbar-margin-bottom: 10px;
+$topbar-link-bg: $cc-white !default;
+$topbar-link-bg-hover: $cc-gray !default;
+$topbar-link-bg-color-hover: $cc-black !default;
+$topbar-dropdown-link-color: $cc-black !default;
+$topbar-dropdown-link-color-hover: $cc-black !default;
+$topbar-dropdown-link-bg: $cc-white !default;
+$topbar-dropdown-link-bg-hover: $cc-white !default;
+$topbar-dropdown-toggle-color: $cc-black;
