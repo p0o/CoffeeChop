@@ -9,15 +9,10 @@ A very simple angularJS SPA for small online shoppings.
 
 ## Quickstart
 
+The project dependencies are not included in downloaded folder. To install all the dependencies you will need bower. 
 
 ```bash
-bundle exec compass watch
+bower install
 ```
 
-## Upgrading
-
-If you'd like to upgrade to a newer version of Foundation down the road just run:
-
-```bash
-bower update
-```
+This project is under active development and there is NO STABLE VERSION. Please use with your own risk and this kinda stuff!
