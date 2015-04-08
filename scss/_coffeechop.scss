@@ -9,6 +9,7 @@ $body-bg: $cc-gray !default;
 // grid settings
 $row-width: rem-calc(1200);
 
+
 // top-bar settings
 $topbar-bg-color: $cc-white;
 $topbar-bg: $cc-white;
@@ -24,3 +25,30 @@ $topbar-dropdown-link-color-hover: $cc-black !default;
 $topbar-dropdown-link-bg: $cc-white !default;
 $topbar-dropdown-link-bg-hover: lighten($cc-gray,5) !default;
 $topbar-dropdown-toggle-color: $cc-black;
+
+.offer-x {
+  height: rem-calc(166.6666);	
+}
+.offer-y {
+  height: rem-calc(250);
+}
+.offer-special {
+  height:rem-calc(250);
+}
+.cc-list {
+  background: $cc-white;
+  height: rem-calc(500);	
+}
+.cc-box {
+  background: $cc-white;
+  border-bottom: rem-calc(1) solid lighten($cc-black,90%);
+  border-right: rem-calc(1) solid lighten($cc-black,90%);
+}
+.cc-box:hover {
+  position:relative;
+  z-index:20;
+  -webkit-box-shadow: 0px 2px 4px 0px lighten($cc-black,70%);
+  -moz-box-shadow: 0px 2px 4px 0px lighten($cc-black,70%);
+  box-shadow: 0px 2px 4px 0px lighten($cc-black,70%);
+  border:0;
+}

@@ -1,3 +1,41 @@
+/* line 29, ../scss/_coffeechop.scss */
+.offer-x {
+  height: 10.41666rem;
+}
+
+/* line 32, ../scss/_coffeechop.scss */
+.offer-y {
+  height: 15.625rem;
+}
+
+/* line 35, ../scss/_coffeechop.scss */
+.offer-special {
+  height: 15.625rem;
+}
+
+/* line 38, ../scss/_coffeechop.scss */
+.cc-list {
+  background: #fff;
+  height: 31.25rem;
+}
+
+/* line 42, ../scss/_coffeechop.scss */
+.cc-box {
+  background: #fff;
+  border-bottom: 0.0625rem solid #e6e6e6;
+  border-right: 0.0625rem solid #e6e6e6;
+}
+
+/* line 47, ../scss/_coffeechop.scss */
+.cc-box:hover {
+  position: relative;
+  z-index: 20;
+  -webkit-box-shadow: 0px 2px 4px 0px #b3b3b3;
+  -moz-box-shadow: 0px 2px 4px 0px #b3b3b3;
+  box-shadow: 0px 2px 4px 0px #b3b3b3;
+  border: 0;
+}
+
 /* line 348, ../bower_components/foundation/scss/foundation/components/_global.scss */
 meta.foundation-version {
   font-family: "/5.5.1/";
