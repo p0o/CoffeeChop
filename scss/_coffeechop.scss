@@ -2,6 +2,7 @@
 $cc-white: #fff;
 $cc-gray: #eee;
 $cc-black: #000;
+$cc-red: #E52E04;
 
 // global settings
 $body-bg: $cc-gray !default;
@@ -16,7 +17,7 @@ $topbar-bg: $cc-white;
 $topbar-link-color: $cc-black;
 $topbar-link-color-hover: $cc-black !default;
 $topbar-height: rem-calc(70);
-$topbar-margin-bottom: 10px;
+$topbar-margin-bottom: 30px;
 $topbar-link-bg: $cc-white !default;
 $topbar-link-bg-hover: lighten($cc-gray,5) !default;
 $topbar-link-bg-color-hover: $cc-black !default;
@@ -35,14 +36,46 @@ $topbar-dropdown-toggle-color: $cc-black;
 .offer-special {
   height:rem-calc(250);
 }
+// left list which will disapear in small screens
 .cc-list {
   background: $cc-white;
   height: rem-calc(500);	
+  border-right: rem-calc(1) solid lighten($cc-black,90%);
+  // Category list header
+  #list-header {
+    margin: rem-calc(15) 0;
+    line-height: rem-calc(30);
+    text-transform: uppercase;
+    font-size: rem-calc(22);
+    font-weight:bold;
+    color: $cc-red;
+    width: 100%;
+    text-align: center;
+  }
+  // This is the list loading categories in large and medium screens
+  ul {
+    margin-top:rem-calc(25);
+    text-align:center;
+    li {
+      cursor: pointer;
+      line-height: rem-calc(40);
+    }
+    li:nth-child(odd) {
+      color: $cc-red;
+    }
+  }
 }
 .cc-box {
   background: $cc-white;
   border-bottom: rem-calc(1) solid lighten($cc-black,90%);
   border-right: rem-calc(1) solid lighten($cc-black,90%);
+  .row {
+    padding: rem-calc(7.5);
+  }
+  
+  img {
+    float:right;
+  }
 }
 .cc-box:hover {
   position:relative;
@@ -51,4 +84,23 @@ $topbar-dropdown-toggle-color: $cc-black;
   -moz-box-shadow: 0px 2px 4px 0px lighten($cc-black,70%);
   box-shadow: 0px 2px 4px 0px lighten($cc-black,70%);
   border:0;
+}
+.cc-topblock {
+	background: $cc-white;
+	height:rem-calc(45);
+	border-bottom: rem-calc(1) solid lighten($cc-black,90%);
+	border-top: rem-calc(5) solid $cc-red;
+	border-right: rem-calc(1) solid $cc-gray;
+}
+
+// header in main holder
+#header {
+	h3 {
+	  line-height:rem-calc(40);
+	  margin:0;
+	  padding:0;
+	  font-size: rem-calc(17);
+	  text-transform: uppercase;
+	  height: rem-calc(40);
+	}
 }
