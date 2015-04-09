@@ -27,15 +27,58 @@ $topbar-dropdown-link-bg: $cc-white !default;
 $topbar-dropdown-link-bg-hover: lighten($cc-gray,5) !default;
 $topbar-dropdown-toggle-color: $cc-black;
 
+
+// header in main deal holder
+.cc-topblock {
+	background: $cc-white;
+	border-bottom: rem-calc(1) solid lighten($cc-black,90%);
+	border-top: rem-calc(5) solid $cc-red;
+	border-right: rem-calc(1) solid $cc-gray;
+	line-height:rem-calc(40);
+	height: rem-calc(50);
+	font-size: rem-calc(15);
+
+	h3.header-text {
+	  margin-top: rem-calc(10);
+	  font-size: rem-calc(18);
+	  text-transform: uppercase;
+	  height: rem-calc(20);
+	  overflow: hidden;
+	}
+	a {
+	  height: rem-calc(20);
+	  display: block;
+	}
+	margin:0;
+	padding:0;
+}
+
+// deal cells
 .offer-x {
   height: rem-calc(166.6666);	
+  // adding some individual settings for offer view
+  span.title {
+    margin-bottom: rem-calc(40);
+  }
+  img {
+    max-height: rem-calc(150);
+  }
 }
 .offer-y {
   height: rem-calc(250);
+  // adding some individual settings for offer view
+  span.subtitle {
+    margin-bottom: rem-calc(25);
+  }
+  img {
+    max-height: rem-calc(180);
+  }
+  
 }
 .offer-special {
   height:rem-calc(250);
 }
+
 // left list which will disapear in small screens
 .cc-list {
   background: $cc-white;
@@ -52,7 +95,6 @@ $topbar-dropdown-toggle-color: $cc-black;
     width: 100%;
     text-align: center;
   }
-  // This is the list loading categories in large and medium screens
   ul {
     margin-top:rem-calc(25);
     text-align:center;
@@ -65,17 +107,37 @@ $topbar-dropdown-toggle-color: $cc-black;
     }
   }
 }
+
+// Every box that represent an offer in main page
 .cc-box {
   background: $cc-white;
   border-bottom: rem-calc(1) solid lighten($cc-black,90%);
   border-right: rem-calc(1) solid lighten($cc-black,90%);
   .row {
     padding: rem-calc(7.5);
+    span.title {
+      font-size: rem-calc(16);
+      text-align:center;
+      color: lighten($cc-black,30%);
+      display: block;
+    }
+    span.subtitle {
+      font-size: rem-calc(12);
+      text-align:center;
+      color: lighten($cc-black,50%);
+    }
+    .label {
+      font-size: rem-calc(14);
+      display:block;
+      width:rem-calc(80);
+      margin:rem-calc(10) auto;
+    }
+    img {
+      float:right;
+  	}
   }
   
-  img {
-    float:right;
-  }
+  
 }
 .cc-box:hover {
   position:relative;
@@ -85,22 +147,5 @@ $topbar-dropdown-toggle-color: $cc-black;
   box-shadow: 0px 2px 4px 0px lighten($cc-black,70%);
   border:0;
 }
-.cc-topblock {
-	background: $cc-white;
-	height:rem-calc(45);
-	border-bottom: rem-calc(1) solid lighten($cc-black,90%);
-	border-top: rem-calc(5) solid $cc-red;
-	border-right: rem-calc(1) solid $cc-gray;
-}
 
-// header in main holder
-#header {
-	h3 {
-	  line-height:rem-calc(40);
-	  margin:0;
-	  padding:0;
-	  font-size: rem-calc(17);
-	  text-transform: uppercase;
-	  height: rem-calc(40);
-	}
-}
+
