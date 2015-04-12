@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="stylesheets/app.css" />
     <script type="text/javascript" src="bower_components/angularjs/angular.min.js"></script>
     <script type="text/javascript" src="bower_components/angular-route/angular-route.min.js"></script>
+    <script type="text/javascript" src="js/controllers.js"></script>
     <script src="bower_components/modernizr/modernizr.js"></script>
   </head>
   <body>
@@ -46,12 +47,8 @@
         <div class="medium-2 columns hide-for-small-only cc-list">
           <div id="list-header" class="columns">Women's Clothing</div>
           <hr />
-          <ul class="no-bullet">
-            <li>Summer dresses</li>
-            <li>Casual dresses</li>
-            <li>Blouses</li>
-            <li>Skirts</li>
-            <li>T-Shirts</li>
+          <ul class="no-bullet" ng-controller="FrontpageCtrl">
+            <li ng-repeat="category in data.categories">{{category}}</li>
           </ul>
         </div>
         <div class="medium-10 columns">
