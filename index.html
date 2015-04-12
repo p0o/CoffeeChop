@@ -47,6 +47,7 @@
         <div class="medium-2 columns hide-for-small-only cc-list">
           <div id="list-header" class="columns">Women's Clothing</div>
           <hr />
+          <!-- =============== Frontpage Controller =============== -->
           <ul class="no-bullet" ng-controller="FrontpageCtrl">
             <li ng-repeat="category in data.categories">{{category}}</li>
           </ul>
@@ -54,93 +55,53 @@
         <div class="medium-10 columns">
           <div class="row medium-collapse">
             <div class="medium-5 columns">
-              <div class="row collapse">
-                <div class="large-12 columns offer-x cc-box">
-                  <!-- offer block -->
+              <!-- =============== Frontpage Controller =============== -->
+              <div class="row collapse" ng-controller="FrontpageCtrl">
+                <!-- offer-x block -->
+                <div class="large-12 columns offer-x cc-box" ng-repeat="off in data.offs">
                   <div class="row collapse">
                     <div class="small-7 columns">
                       <div class="row">
-                        <span class="title">Freshen up your Warbrone</span>
-                        <span class="label round alert">10% off</span>
-                        <span class="label secondary">$23</span>
+                        <span class="title">{{off.title}}</span>
+                        <span class="label round alert">{{off.off}}% off</span>
+                        <span class="label secondary">${{off.price}}</span>
                       </div>
                     </div>
-                    <div class="small-5 columns"><img src="http://placehold.it/150x150&text=CoffeeChop"></div>
+                    <div class="small-5 columns"><img ng-src="{{off.img}}"></div>
                   </div>
-                  <!-- offer block end -->
                 </div>
-                <div class="large-12 columns offer-x cc-box">
-                  <!-- offer block -->
-                  <div class="row collapse">
-                    <div class="small-7 columns">
-                      <div class="row">
-                        <span class="title">Stylish, mature and natural</span>
-                        <span class="label round alert">10% off</span>
-                        <span class="label secondary">$23</span>
-                      </div>
-                    </div>
-                    <div class="small-5 columns"><img src="http://placehold.it/150x150&text=CoffeeChop"></div>
-                  </div>
-                  <!-- offer block end -->
-                </div>
-                <div class="large-12 columns offer-x cc-box">
-                  <!-- offer block -->
-                  <div class="row collapse">
-                    <div class="small-7 columns">
-                      <div class="row">
-                        <span class="title">Get the sexy beach look</span>
-                        <span class="label round alert">10% off</span>
-                        <span class="label secondary">$23</span>
-                      </div>
-                    </div>
-                    <div class="small-5 columns"><img src="http://placehold.it/150x150&text=CoffeeChop"></div>
-                  </div>
-                  <!-- offer block end -->
-                </div>
+                <!-- offer-x block end-->
               </div>
             </div>
             <div class="medium-7 columns">
-              <div class="row medium-collapse">
+              <!-- =============== Frontpage Controller =============== -->
+              <div class="row medium-collapse" ng-controller="FrontpageCtrl">
                 <div class="large-12 columns">
-                  <div class="large-8 medium-6 columns cc-box offer-special">offer-special</div>
-                  <div class="large-4 medium-6 columns cc-box offer-y">
-                    <!-- offer block -->
-                    <div class="row">
-                      <span class="title">Bodycon dresses</span>
-                      <span class="subtitle">Get the look you deserve</span>
-                      <img src="http://placehold.it/150x180&text=CoffeeChop">
-                    </div>
-                    <!-- offer block end -->
+                  <div class="large-8 medium-6 columns cc-box offer-special">
+                    <div></div>
                   </div>
+                  <!-- offer-y one block -->
+                  <div class="large-4 medium-6 columns cc-box offer-y">
+                    <div class="row">
+                      <span class="title">{{data.offers[0].title}}</span>
+                      <span class="subtitle">{{data.offers[0].subtitle}}</span>
+                      <img ng-src="{{data.offers[0].img}}">
+                    </div>
+                  </div>
+                  <!-- offer-y block end -->
                 </div>
                 <div class="large-12 columns">
-                  <div class="large-4 small-6 columns cc-box offer-y">
-                    <!-- offer block -->
+                  <!-- offer-y blocks (3 blocks) -->
+                  <div class="large-4 small-6 columns cc-box offer-y" 
+                   ng-repeat="offer in data.offers.slice(1,4)">
                     <div class="row">
-                      <span class="title">Bodycon dresses</span>
-                      <span class="subtitle">Get the look you deserve</span>
-                      <img src="http://placehold.it/150x180&text=CoffeeChop">
+                      <span class="title">{{offer.title}}</span>
+                      <span class="subtitle">{{offer.subtitle}}</span>
+                      <img ng-src="{{offer.img}}">
                     </div>
                     <!-- offer block end -->
                   </div>
-                  <div class="large-4 small-6 columns cc-box offer-y">
-                    <!-- offer block -->
-                    <div class="row">
-                      <span class="title">Bodycon dresses</span>
-                      <span class="subtitle">Get the look you deserve</span>
-                      <img src="http://placehold.it/150x180&text=CoffeeChop">
-                    </div>
-                    <!-- offer block end -->
-                  </div>
-                  <div class="large-4 small-6 columns cc-box offer-y">
-                    <!-- offer block -->
-                    <div class="row">
-                      <span class="title">Bodycon dresses</span>
-                      <span class="subtitle">Get the look you deserve</span>
-                      <img src="http://placehold.it/150x180&text=CoffeeChop">
-                    </div>
-                    <!-- offer block end -->
-                  </div>
+                  
                 </div>
               </div>
             </div>
