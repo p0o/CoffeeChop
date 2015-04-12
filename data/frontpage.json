@@ -1,0 +1,12 @@
+{
+	"categories":[
+		"Blouses",
+		"Dresses",
+		"Skirts"
+	],
+	"offs":[
+		{"id":"1","title":"Get the sexy beach look","img":"/images/sample1.jpg","off":"15%","price":"22"},
+		{"id":"1","title":"Get the sexy beach look","img":"/images/sample1.jpg","off":"10%","price":"35"},
+		{"id":"1","title":"Get the sexy beach look","img":"/images/sample1.jpg","off":"12%","price":"10"}
+	]
+}
