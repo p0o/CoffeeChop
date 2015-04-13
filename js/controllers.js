@@ -1,6 +1,6 @@
-var cchopApp = angular.module('cchopApp',[]);
+var cchopControllers = angular.module('cchopControllers',[]);
 
-cchopApp.controller('FrontpageCtrl', ['$scope' ,'$http',
+cchopControllers.controller('FrontpageCtrl', ['$scope' ,'$http',
  function($scope,$http) {
 	$http.get('data/frontpage.json').success(function(data){
 		$scope.data = data;

@@ -1,0 +1,52 @@
+<!-- =============== Frontpage Controller Template =============== -->
+<div class="row medium-collapse">
+  <div class="medium-5 columns">
+    <div class="row collapse" >
+      <!-- offer-x block -->
+      <div class="large-12 columns offer-x cc-box" ng-repeat="off in data.offs">
+        <div class="row collapse">
+          <div class="small-7 columns">
+            <div class="row">
+              <span class="title">{{off.title}}</span>
+              <span class="label round alert">{{off.off}}% off</span>
+              <span class="label secondary">${{off.price}}</span>
+            </div>
+          </div>
+          <div class="small-5 columns"><img ng-src="{{off.img}}"></div>
+        </div>
+      </div>
+      <!-- offer-x block end-->
+    </div>
+  </div>
+  <div class="medium-7 columns">
+    <div class="row medium-collapse" >
+      <div class="large-12 columns">
+        <div class="large-8 medium-6 columns cc-box offer-special">
+          <div></div>
+        </div>
+        <!-- offer-y one block -->
+        <div class="large-4 medium-6 columns cc-box offer-y">
+          <div class="row">
+            <span class="title">{{data.offers[0].title}}</span>
+            <span class="subtitle">{{data.offers[0].subtitle}}</span>
+            <img ng-src="{{data.offers[0].img}}">
+          </div>
+        </div>
+        <!-- offer-y block end -->
+      </div>
+      <div class="large-12 columns">
+        <!-- offer-y blocks (3 blocks) -->
+        <div class="large-4 small-6 columns cc-box offer-y" 
+         ng-repeat="offer in data.offers.slice(1,4)">
+          <div class="row">
+            <span class="title">{{offer.title}}</span>
+            <span class="subtitle">{{offer.subtitle}}</span>
+            <img ng-src="{{offer.img}}">
+          </div>
+          <!-- offer block end -->
+        </div>
+        
+      </div>
+    </div>
+  </div>
+</div>
