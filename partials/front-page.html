@@ -3,11 +3,11 @@
   <div class="medium-5 columns">
     <div class="row collapse" >
       <!-- offer-x block -->
-      <div class="large-12 columns offer-x cc-box" ng-repeat="off in data.offs">
+      <div class="large-12 columns offer-x cc-box" ng-repeat="off in offs">
         <div class="row collapse">
           <div class="small-7 columns">
             <div class="row">
-              <span class="title">{{off.title}}</span>
+              <span class="title"><a href="/#/item/{{off.id}}">{{off.title}}</a></span>
               <span class="label round alert">{{off.off}}% off</span>
               <span class="label secondary">${{off.price}}</span>
             </div>
@@ -27,9 +27,9 @@
         <!-- offer-y one block -->
         <div class="large-4 medium-6 columns cc-box offer-y">
           <div class="row">
-            <span class="title">{{data.offers[0].title}}</span>
-            <span class="subtitle">{{data.offers[0].subtitle}}</span>
-            <img ng-src="{{data.offers[0].img}}">
+            <span class="title">{{offers[0].title}}</span>
+            <span class="subtitle">{{offers[0].subtitle}}</span>
+            <img ng-src="{{offers[0].img}}">
           </div>
         </div>
         <!-- offer-y block end -->
@@ -37,7 +37,7 @@
       <div class="large-12 columns">
         <!-- offer-y blocks (3 blocks) -->
         <div class="large-4 small-6 columns cc-box offer-y" 
-         ng-repeat="offer in data.offers.slice(1,4)">
+         ng-repeat="offer in offers.slice(1,4)">
           <div class="row">
             <span class="title">{{offer.title}}</span>
             <span class="subtitle">{{offer.subtitle}}</span>

@@ -1,4 +1,12 @@
-/* line 32, ../scss/_coffeechop.scss */
+/* line 31, ../scss/_coffeechop.scss */
+.label {
+  font-size: 0.875rem !important;
+  display: block !important;
+  width: 5rem;
+  margin: 0.625rem auto;
+}
+
+/* line 39, ../scss/_coffeechop.scss */
 .cc-topblock {
   background: #fff;
   border-bottom: 0.0625rem solid #e6e6e6;
@@ -10,7 +18,7 @@
   margin: 0;
   padding: 0;
 }
-/* line 41, ../scss/_coffeechop.scss */
+/* line 48, ../scss/_coffeechop.scss */
 .cc-topblock h3.header-text {
   margin-top: 0.625rem;
   font-size: 1.125rem;
@@ -18,50 +26,50 @@
   height: 1.25rem;
   overflow: hidden;
 }
-/* line 48, ../scss/_coffeechop.scss */
+/* line 55, ../scss/_coffeechop.scss */
 .cc-topblock a {
   height: 1.25rem;
   display: block;
 }
 
-/* line 57, ../scss/_coffeechop.scss */
+/* line 64, ../scss/_coffeechop.scss */
 .offer-x {
   height: 10.41666rem;
 }
-/* line 60, ../scss/_coffeechop.scss */
+/* line 67, ../scss/_coffeechop.scss */
 .offer-x span.title {
   margin-bottom: 2.5rem;
 }
-/* line 63, ../scss/_coffeechop.scss */
+/* line 70, ../scss/_coffeechop.scss */
 .offer-x img {
   max-height: 9.375rem;
 }
 
-/* line 67, ../scss/_coffeechop.scss */
+/* line 74, ../scss/_coffeechop.scss */
 .offer-y {
   height: 15.625rem;
 }
-/* line 70, ../scss/_coffeechop.scss */
+/* line 77, ../scss/_coffeechop.scss */
 .offer-y span.subtitle {
   margin-bottom: 1.5625rem;
 }
-/* line 73, ../scss/_coffeechop.scss */
+/* line 80, ../scss/_coffeechop.scss */
 .offer-y img {
   max-height: 11.25rem;
 }
 
-/* line 78, ../scss/_coffeechop.scss */
+/* line 85, ../scss/_coffeechop.scss */
 .offer-special {
   height: 15.625rem;
 }
 
-/* line 83, ../scss/_coffeechop.scss */
+/* line 90, ../scss/_coffeechop.scss */
 .cc-list {
   background: #fff;
   height: 31.25rem;
   border-right: 0.0625rem solid #e6e6e6;
 }
-/* line 88, ../scss/_coffeechop.scss */
+/* line 95, ../scss/_coffeechop.scss */
 .cc-list #list-header {
   margin: 0.9375rem 0;
   line-height: 1.875rem;
@@ -72,57 +80,49 @@
   width: 100%;
   text-align: center;
 }
-/* line 98, ../scss/_coffeechop.scss */
+/* line 105, ../scss/_coffeechop.scss */
 .cc-list ul {
   margin-top: 1.5625rem;
   text-align: center;
 }
-/* line 101, ../scss/_coffeechop.scss */
-.cc-list ul li {
-  cursor: pointer;
+/* line 108, ../scss/_coffeechop.scss */
+.cc-list ul li > a {
   line-height: 2.5rem;
 }
-/* line 105, ../scss/_coffeechop.scss */
-.cc-list ul li:nth-child(odd) {
+/* line 111, ../scss/_coffeechop.scss */
+.cc-list ul li > a:nth-child(odd) {
   color: #E52E04;
 }
 
-/* line 112, ../scss/_coffeechop.scss */
+/* line 118, ../scss/_coffeechop.scss */
 .cc-box {
   background: #fff;
   border-bottom: 0.0625rem solid #e6e6e6;
   border-right: 0.0625rem solid #e6e6e6;
 }
-/* line 116, ../scss/_coffeechop.scss */
+/* line 122, ../scss/_coffeechop.scss */
 .cc-box .row {
   padding: 0.46875rem;
 }
-/* line 118, ../scss/_coffeechop.scss */
+/* line 124, ../scss/_coffeechop.scss */
 .cc-box .row span.title {
   font-size: 1rem;
   text-align: center;
   color: #4d4d4d;
   display: block;
 }
-/* line 124, ../scss/_coffeechop.scss */
+/* line 130, ../scss/_coffeechop.scss */
 .cc-box .row span.subtitle {
   font-size: 0.75rem;
   text-align: center;
   color: gray;
 }
-/* line 129, ../scss/_coffeechop.scss */
-.cc-box .row .label {
-  font-size: 0.875rem;
-  display: block;
-  width: 5rem;
-  margin: 0.625rem auto;
-}
-/* line 135, ../scss/_coffeechop.scss */
+/* line 136, ../scss/_coffeechop.scss */
 .cc-box .row img {
   float: right;
 }
 
-/* line 142, ../scss/_coffeechop.scss */
+/* line 141, ../scss/_coffeechop.scss */
 .cc-box:hover {
   position: relative;
   z-index: 20;
@@ -130,6 +130,23 @@
   -moz-box-shadow: 0px 2px 4px 0px #b3b3b3;
   box-shadow: 0px 2px 4px 0px #b3b3b3;
   border: 0;
+}
+
+/* line 150, ../scss/_coffeechop.scss */
+.cc-listbox {
+  background: #fff;
+  border-bottom: 0.0625rem solid #e6e6e6;
+  border-right: 0.0625rem solid #e6e6e6;
+  text-align: center;
+}
+/* line 155, ../scss/_coffeechop.scss */
+.cc-listbox img {
+  max-width: 12.5rem;
+  max-height: 15.625rem;
+}
+/* line 159, ../scss/_coffeechop.scss */
+.cc-listbox h3 {
+  font-size: 1rem;
 }
 
 /* line 348, ../bower_components/foundation/scss/foundation/components/_global.scss */

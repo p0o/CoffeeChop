@@ -1,0 +1,17 @@
+<div class="row small-collapse">
+	<div class="large-10 columns">
+		<div class="row">
+			<div class="large-4 columns cc-listbox" ng-repeat="item in list | filter:listId" >
+				<a href="/#/img/"><img ng-src="{{item.img}}"></a>
+				<h3>{{item.title}}</h3>
+				<span class="label round alert">{{item.off}}% off</span>
+              	<span class="label secondary">${{item.price}}</span>
+
+			</div>
+		</div>
+		
+	</div>
+	<div class="large-2 columns">
+	</div>
+</div>
+

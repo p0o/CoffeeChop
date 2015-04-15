@@ -27,6 +27,13 @@ $topbar-dropdown-link-bg: $cc-white !default;
 $topbar-dropdown-link-bg-hover: lighten($cc-gray,5) !default;
 $topbar-dropdown-toggle-color: $cc-black;
 
+// General styles
+.label {
+  font-size: rem-calc(14) !important;
+  display:block !important;
+  width:rem-calc(80);
+  margin:rem-calc(10) auto;
+}
 
 // header in main deal holder
 .cc-topblock {
@@ -98,11 +105,10 @@ $topbar-dropdown-toggle-color: $cc-black;
   ul {
     margin-top:rem-calc(25);
     text-align:center;
-    li {
-      cursor: pointer;
+    li > a {
       line-height: rem-calc(40);
     }
-    li:nth-child(odd) {
+    li > a:nth-child(odd) {
       color: $cc-red;
     }
   }
@@ -126,18 +132,11 @@ $topbar-dropdown-toggle-color: $cc-black;
       text-align:center;
       color: lighten($cc-black,50%);
     }
-    .label {
-      font-size: rem-calc(14);
-      display:block;
-      width:rem-calc(80);
-      margin:rem-calc(10) auto;
-    }
+    
     img {
       float:right;
   	}
   }
-  
-  
 }
 .cc-box:hover {
   position:relative;
@@ -148,4 +147,16 @@ $topbar-dropdown-toggle-color: $cc-black;
   border:0;
 }
 
-
+.cc-listbox {
+  background: $cc-white;
+  border-bottom: rem-calc(1) solid lighten($cc-black,90%);
+  border-right: rem-calc(1) solid lighten($cc-black,90%);
+  text-align:center;
+  img {
+    max-width: rem-calc(200);
+    max-height: rem-calc(250);
+  }
+  h3 {
+    font-size: rem-calc(16);
+  }
+}

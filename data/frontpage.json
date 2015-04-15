@@ -1,10 +1,10 @@
 {
-	"categories":[
-		"Summer dresses",
-		"Casual dresses",
-		"Blouses",
-		"Skirts",
-		"T-Shirts"
+	"lists":[
+		{"id":"summer_dresses","name":"Summer dresses"},
+		{"id":"casual_dresses","name":"Casual dresses"},
+		{"id":"blouses","name":"Blouses"},
+		{"id":"skirts","name":"Skirts"},
+		{"id":"t-shirts","name":"T-Shirts"}
 	],
 	"offs":[
 		{"id":"1","title":"Get the sexy beach look","img":"/images/sample1.jpg","off":"15","price":"22"},
