@@ -16,12 +16,17 @@ cchopControllers.controller('ViewitemCtrl',['$scope','$http','$routeParams',
 
 // Controling the page that show lists of different items
 // Dependency Injected 'list' is a provider in services.js
-cchopControllers.controller('ViewlistCtrl',['$scope','$http','$routeParams','list',
- function($scope,$http,$routeParams,list) {
- 	$scope.listId = $routeParams.listId;
+cchopControllers.controller('ViewlistCtrl',['$scope','$http','$routeParams','list','$location',
+ function($scope,$http,$routeParams,list,$location) {
+ 	$scope.goToItem = function(id) {
+ 		$location.url('item/'+id);
+ 	}
+ 	// Using expression filtering
+ 	$scope.listFilter = {};
+ 	$scope.listFilter.list_id = $routeParams.listId;
  	// Waiting for asynchronous promise from $http
- 	list.res().then(function(data) {
- 		$scope.list = data.data;
+ 	list.res().then(function(res) {
+ 		$scope.list = res.data;
  	});
  	
 }]);
