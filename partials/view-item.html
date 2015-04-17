@@ -1,2 +1,29 @@
+<div class="row collapse">
+	<div class="large-9 columns">
+		<div class="row columns cc-item">
+			<div class="small-5 columns">
+				<img ng-src="{{item.img}}">
+			</div>
+			<div class="small-7 columns">
+				<h2>{{item.title}}</h2>
+				<h5>{{item.subtitle}}</h5>
+				<span>Sizes:</span>
+				<ul class="button-group">
+					<li><a class="button tiny secondary" ng-click="sizeBtnToggle(size)" 
+						ng-class="{ selected: sizeBtn[size] }" ng-repeat="size in item.sizes">{{size}}</a>
+					</li>
+				</ul>
+				<span>Colors:</span>
+				<ul class="button-group">
+					<li><a class="button tiny" ng-class="select" 
+						ng-repeat="size in item.sizes">{{size}}</a>
+					</li>
+				</ul>
+				<p>{{item.description}}</p>
+			</div>
+		</div>
+	</div>
+	<div class="large-3 columns">
+	</div>
+</div>
 
-hey!! {{itemId}}

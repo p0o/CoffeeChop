@@ -1,4 +1,4 @@
-/* line 31, ../scss/_coffeechop.scss */
+/* line 32, ../scss/_coffeechop.scss */
 .label {
   font-size: 0.875rem !important;
   display: block !important;
@@ -6,7 +6,7 @@
   margin: 0.625rem auto;
 }
 
-/* line 39, ../scss/_coffeechop.scss */
+/* line 40, ../scss/_coffeechop.scss */
 .cc-topblock {
   background: #fff;
   border-bottom: 0.0625rem solid #e6e6e6;
@@ -18,7 +18,7 @@
   margin: 0;
   padding: 0;
 }
-/* line 48, ../scss/_coffeechop.scss */
+/* line 49, ../scss/_coffeechop.scss */
 .cc-topblock h3.header-text {
   margin-top: 0.625rem;
   font-size: 1.125rem;
@@ -26,50 +26,50 @@
   height: 1.25rem;
   overflow: hidden;
 }
-/* line 55, ../scss/_coffeechop.scss */
+/* line 56, ../scss/_coffeechop.scss */
 .cc-topblock a {
   height: 1.25rem;
   display: block;
 }
 
-/* line 64, ../scss/_coffeechop.scss */
+/* line 65, ../scss/_coffeechop.scss */
 .offer-x {
   height: 10.41666rem;
 }
-/* line 67, ../scss/_coffeechop.scss */
+/* line 68, ../scss/_coffeechop.scss */
 .offer-x span.title {
   margin-bottom: 2.5rem;
 }
-/* line 70, ../scss/_coffeechop.scss */
+/* line 71, ../scss/_coffeechop.scss */
 .offer-x img {
   max-height: 9.375rem;
 }
 
-/* line 74, ../scss/_coffeechop.scss */
+/* line 75, ../scss/_coffeechop.scss */
 .offer-y {
   height: 15.625rem;
 }
-/* line 77, ../scss/_coffeechop.scss */
+/* line 78, ../scss/_coffeechop.scss */
 .offer-y span.subtitle {
   margin-bottom: 1.5625rem;
 }
-/* line 80, ../scss/_coffeechop.scss */
+/* line 81, ../scss/_coffeechop.scss */
 .offer-y img {
   max-height: 11.25rem;
 }
 
-/* line 85, ../scss/_coffeechop.scss */
+/* line 86, ../scss/_coffeechop.scss */
 .offer-special {
   height: 15.625rem;
 }
 
-/* line 90, ../scss/_coffeechop.scss */
+/* line 91, ../scss/_coffeechop.scss */
 .cc-list {
   background: #fff;
   height: 31.25rem;
   border-right: 0.0625rem solid #e6e6e6;
 }
-/* line 95, ../scss/_coffeechop.scss */
+/* line 96, ../scss/_coffeechop.scss */
 .cc-list #list-header {
   margin: 0.9375rem 0;
   line-height: 1.875rem;
@@ -80,49 +80,49 @@
   width: 100%;
   text-align: center;
 }
-/* line 105, ../scss/_coffeechop.scss */
+/* line 106, ../scss/_coffeechop.scss */
 .cc-list ul {
   margin-top: 1.5625rem;
   text-align: center;
 }
-/* line 108, ../scss/_coffeechop.scss */
+/* line 109, ../scss/_coffeechop.scss */
 .cc-list ul li > a {
   line-height: 2.5rem;
 }
-/* line 111, ../scss/_coffeechop.scss */
+/* line 112, ../scss/_coffeechop.scss */
 .cc-list ul li > a:nth-child(odd) {
   color: #E52E04;
 }
 
-/* line 118, ../scss/_coffeechop.scss */
+/* line 119, ../scss/_coffeechop.scss */
 .cc-box {
   background: #fff;
   border-bottom: 0.0625rem solid #e6e6e6;
   border-right: 0.0625rem solid #e6e6e6;
 }
-/* line 122, ../scss/_coffeechop.scss */
+/* line 123, ../scss/_coffeechop.scss */
 .cc-box .row {
   padding: 0.46875rem;
 }
-/* line 124, ../scss/_coffeechop.scss */
+/* line 125, ../scss/_coffeechop.scss */
 .cc-box .row span.title {
   font-size: 1rem;
   text-align: center;
   color: #4d4d4d;
   display: block;
 }
-/* line 130, ../scss/_coffeechop.scss */
+/* line 131, ../scss/_coffeechop.scss */
 .cc-box .row span.subtitle {
   font-size: 0.75rem;
   text-align: center;
   color: gray;
 }
-/* line 136, ../scss/_coffeechop.scss */
+/* line 137, ../scss/_coffeechop.scss */
 .cc-box .row img {
   float: right;
 }
 
-/* line 141, ../scss/_coffeechop.scss */
+/* line 142, ../scss/_coffeechop.scss */
 .cc-box:hover {
   position: relative;
   z-index: 2;
@@ -132,19 +132,20 @@
   border: 0;
 }
 
-/* line 150, ../scss/_coffeechop.scss */
+/* line 151, ../scss/_coffeechop.scss */
 .cc-listbox {
   padding-bottom: 0.625rem;
 }
-/* line 152, ../scss/_coffeechop.scss */
+/* line 154, ../scss/_coffeechop.scss */
 .cc-listbox .row {
+  cursor: pointer;
   background: #fff;
-  border-bottom: -0.0625rem solid #e6e6e6;
-  border-right: -0.0625rem solid #e6e6e6;
   text-align: center;
   transition: all 0.3s;
+  border-bottom: -0.0625rem solid #e6e6e6;
+  border-right: -0.0625rem solid #e6e6e6;
 }
-/* line 159, ../scss/_coffeechop.scss */
+/* line 162, ../scss/_coffeechop.scss */
 .cc-listbox .row .imagebox {
   width: 100%;
   display: block;
@@ -153,16 +154,29 @@
   background-position: center top;
   transition: background-size 0.4s;
 }
-/* line 167, ../scss/_coffeechop.scss */
-.cc-listbox .row h3 {
-  font-size: 1rem;
+/* line 170, ../scss/_coffeechop.scss */
+.cc-listbox .row h3 a {
+  font-size: 0.9375rem;
+  color: #4d4d4d;
 }
-/* line 171, ../scss/_coffeechop.scss */
+/* line 175, ../scss/_coffeechop.scss */
 .cc-listbox .row:hover {
   -webkit-box-shadow: 0px 2px 4px 0px gray;
   -moz-box-shadow: 0px 2px 4px 0px gray;
   box-shadow: 0px 2px 4px 0px gray;
   border: 0;
+}
+
+/* line 184, ../scss/_coffeechop.scss */
+.cc-item {
+  background: #fff;
+  border-bottom: 0.0625rem solid #e6e6e6;
+  border-right: 0.0625rem solid #e6e6e6;
+}
+/* line 188, ../scss/_coffeechop.scss */
+.cc-item .button.selected {
+  background-color: #2bb0e7;
+  color: #fff;
 }
 
 /* line 348, ../bower_components/foundation/scss/foundation/components/_global.scss */

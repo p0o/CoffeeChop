@@ -9,9 +9,23 @@ cchopControllers.controller('FrontpageCtrl', ['$scope' ,'$http',
 	});
 }]);
 
-cchopControllers.controller('ViewitemCtrl',['$scope','$http','$routeParams',
- function($scope,$http,$routeParams){
- 	$scope.itemId = $routeParams.itemId;
+cchopControllers.controller('ViewitemCtrl',['$scope','$http','$routeParams','item_feed_value',
+ function($scope,$http,$routeParams,feedTemplateURL){
+ 	var url = null;
+
+ 	// Size selector
+ 	$scope.sizeBtn = {};
+ 	$scope.sizeBtnToggle = function(size) {
+ 		$scope.sizeBtn[size] = !$scope.sizeBtn[size];
+ 	}
+ 	// Creating item feed URL to fetch data
+ 	url = feedTemplateURL.replace('[PRODUCTID]',$routeParams.itemId);
+ 	$http.get(url).success(function(data) {
+ 		$scope.item = data;
+ 		// Seperate sizes and colors string to Arrays
+ 		$scope.item.sizes = data.available_sizes.split('|');
+ 		$scope.item.colors = data.available_colors.split('|');
+ 	});
 }]);
 
 // Controling the page that show lists of different items
