@@ -29,11 +29,14 @@ $topbar-dropdown-link-bg-hover: lighten($cc-gray,5) !default;
 $topbar-dropdown-toggle-color: $cc-black;
 
 // General styles
-.label {
-  font-size: rem-calc(14) !important;
+span.label {
+  font-size: rem-calc(14) ;
   display:block !important;
   width:rem-calc(80);
   margin:rem-calc(10) auto;
+}
+.cc-white-bg {
+  background: $cc-white;
 }
 
 // header in main deal holder
@@ -185,9 +188,63 @@ $topbar-dropdown-toggle-color: $cc-black;
   background: $cc-white;
   border-bottom: rem-calc(1) solid lighten($cc-black,90%);
   border-right: rem-calc(1) solid lighten($cc-black,90%);
-  .button.selected {
+  h2 {
+    margin-top: rem-calc(12);
+    font-size: rem-calc(22);
+    line-height: rem-calc(28);
+    text-transform: uppercase;
+  }
+  h5 {
+    font-size: rem-calc(15);
+    margin-top: rem-calc(-7);
+    line-height: rem-calc(15);
+    color: lighten($cc-black,40%);
+  }
+  span.label {
+    font-size: rem-calc(20);
+    margin: rem-calc(10) 0 rem-calc(20) 0;
+    line-height: rem-calc(30);
+    width: rem-calc(150);
+  }
+  span.with-off {
+    text-decoration: line-through;
+    font-size: rem-calc(20);
+    margin: 0;
+    line-height: rem-calc(10);
+    background: $cc-gray;
+    color: lighten($cc-black,70%);
+  }
+  .imagebox {
+    width: 100%;
+    margin-top: rem-calc(10);
+    display: block;
+    height: rem-calc(250);
+    background-size:cover;
+    background-position: center top;
+    -webkit-box-shadow: 0px 2px 4px 0px lighten($cc-black,50%);
+    -moz-box-shadow: 0px 2px 4px 0px lighten($cc-black,50%);
+    box-shadow: 0px 2px 4px 0px lighten($cc-black,50%);
+    transition: all 0.4s;
+  }
+  .imagebox:hover {
+    width: 110%;
+  }
+  .button.cc-size.selected {
     background-color: $cc-blue;
     color: $cc-white;
+  }
+  .button.cc-color {
+    margin: rem-calc(2);
+    box-sizing: content-box;
+    border: rem-calc(2) solid $cc-white!important;
+    transition: background 0.5s;
+  }
+  .button.cc-color.selected {
+    border-color: darken($cc-gray,90%)!important;
+  }
+  // Content holder in item view
+  .content {
+    padding-left: rem-calc(40)!important;
   }
 }
 

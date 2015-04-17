@@ -1,24 +1,27 @@
 <div class="row collapse">
 	<div class="large-9 columns">
-		<div class="row columns cc-item">
-			<div class="small-5 columns">
-				<img ng-src="{{item.img}}">
+		<div class="row columns cc-item collapse">
+			<div class="small-4 columns">
+				<div class="imagebox" style="background-image:url('{{item.img}}');"></div>
 			</div>
-			<div class="small-7 columns">
+			<div class="small-8 columns content">
 				<h2>{{item.title}}</h2>
 				<h5>{{item.subtitle}}</h5>
 				<span>Sizes:</span>
 				<ul class="button-group">
-					<li><a class="button tiny secondary" ng-click="sizeBtnToggle(size)" 
-						ng-class="{ selected: sizeBtn[size] }" ng-repeat="size in item.sizes">{{size}}</a>
+					<li ng-repeat="size in item.sizes"><a class="button cc-size tiny secondary" ng-click="sizeBtnToggle(size)" 
+						ng-class="{ selected: sizeBtn[size] }" >{{size}}</a>
 					</li>
 				</ul>
 				<span>Colors:</span>
 				<ul class="button-group">
-					<li><a class="button tiny" ng-class="select" 
-						ng-repeat="size in item.sizes">{{size}}</a>
+					<li ng-repeat="color in item.colors"><a class="button cc-color tiny secondary" 
+						style="background-color:{{color}}" ng-class="{selected: colorBtn[color]}" 
+						ng-click="colorBtnToggle(color)"></a>
 					</li>
 				</ul>
+				<span class="label secondary with-off" ng-show="{hasOff()}">${{item.price}}</span>
+				<span class="label secondary round">${{ getFinalPrice() }}</span>
 				<p>{{item.description}}</p>
 			</div>
 		</div>
