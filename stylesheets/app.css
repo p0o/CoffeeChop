@@ -210,8 +210,8 @@ span.label {
 }
 /* line 217, ../scss/_coffeechop.scss */
 .cc-item .imagebox {
-  width: 4.375rem;
-  height: 4.375rem;
+  width: 4.0625rem;
+  height: 4.0625rem;
   overflow: hidden;
   margin-top: 0.3125rem;
   margin-right: 0.625rem;
