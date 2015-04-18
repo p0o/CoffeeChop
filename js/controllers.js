@@ -27,9 +27,15 @@ cchopControllers.controller('ViewitemCtrl',['$scope','$http','$routeParams','ite
  	url = feedTemplateURL.replace('[PRODUCTID]',$routeParams.itemId);
  	$http.get(url).success(function(data) {
  		$scope.item = data;
- 		// Seperate sizes and colors string to Arrays
+ 		// Seperate sizes, images and colors string to Arrays
  		$scope.item.sizes = data.available_sizes.split('|');
  		$scope.item.colors = data.available_colors.split('|');
+ 		$scope.item.images = data.img.split('|');
+ 		// Image settings
+ 		$scope.selectedImage = $scope.item.images[0];
+ 		$scope.setImage = function(imageAddr) {
+ 			$scope.selectedImage = imageAddr;
+ 		}
  		// Calculate discount if it's not zero
  		data.off = parseInt(data.off);
  		data.price = parseFloat(data.price);

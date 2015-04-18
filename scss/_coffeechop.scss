@@ -215,19 +215,26 @@ span.label {
     color: lighten($cc-black,70%);
   }
   .imagebox {
-    width: 100%;
-    margin-top: rem-calc(10);
-    display: block;
-    height: rem-calc(250);
-    background-size:cover;
-    background-position: center top;
-    -webkit-box-shadow: 0px 2px 4px 0px lighten($cc-black,50%);
-    -moz-box-shadow: 0px 2px 4px 0px lighten($cc-black,50%);
-    box-shadow: 0px 2px 4px 0px lighten($cc-black,50%);
+    width: rem-calc(70);
+    height: rem-calc(70);
+    overflow: hidden;
+    margin-top: rem-calc(5);
+    margin-right: rem-calc(10);
+    display: inline-block;
     transition: all 0.4s;
+    img {
+      width: 100%;
+      background-size:100% auto;
+      background-position: center top;
+    }
+  }
+  .imagebox:first-child {
+    width: 100%;
+    height: rem-calc(270);
+    margin-right: 0;
   }
   .imagebox:hover {
-    width: 110%;
+    //width: 110%;
   }
   .button.cc-size.selected {
     background-color: $cc-blue;
@@ -236,15 +243,59 @@ span.label {
   .button.cc-color {
     margin: rem-calc(2);
     box-sizing: content-box;
-    border: rem-calc(2) solid $cc-white!important;
-    transition: background 0.5s;
+    border: rem-calc(4) solid $cc-white!important;
+    border-radius:20px;
+    transition: all 0.5s;
   }
   .button.cc-color.selected {
-    border-color: darken($cc-gray,90%)!important;
+    border-color: darken($cc-gray,10%)!important;
+    
   }
   // Content holder in item view
   .content {
-    padding-left: rem-calc(40)!important;
+    padding-left: rem-calc(20)!important;
+  }
+
+  // Off label in item view
+  .off-label {
+    border-style: solid;
+    border-color: lighten($cc-red,7%) ;
+    border-width: 0 rem-calc(25) rem-calc(25) rem-calc(25);
+    height: 0;
+    width: 0;
+    position: relative;
+    float:right;
+    margin: rem-calc(-25) rem-calc(-15) 0;
+    span {
+      position: relative;
+      width:100%;
+      z-index: 2;
+      margin-left: rem-calc(-12.5);
+      margin-top:rem-calc(5);
+      color: #fff;
+      text-align: center;
+      display: block;
+      line-height: rem-calc(17);
+      font-size: rem-calc(16);
+      font-weight: bold;
+    }
+    span.off {
+      font-size: rem-calc(13);
+      font-weight: normal;
+      margin-top:0;
+    }
+
+  }
+  .off-label:after {
+    content: "";
+    position: absolute;
+    top: rem-calc(25);
+    left: rem-calc(-25);
+    width: rem-calc(50);
+    height: 0;
+    border-style: solid;
+    border-color: $cc-red transparent transparent transparent;
+    border-width: rem-calc(25) rem-calc(25) 0 rem-calc(25);
   }
 }
 

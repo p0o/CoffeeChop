@@ -29,4 +29,4 @@ cchopApp.config(['$routeProvider',function($routeProvider){
 // Feeds used to load data
 cchopApp.value('frontpage_feed_value',  '/data/frontpage.json');
 cchopApp.value('list_feed_value',       '/data/products.json');
-cchopApp.value('item_feed_value',       '/data/item_[PRODUCTID].json?ss=2');
+cchopApp.value('item_feed_value',       '/data/item_[PRODUCTID].json?ss=3');

@@ -2,14 +2,20 @@
 	<div class="large-9 columns">
 		<div class="row columns cc-item collapse">
 			<div class="small-4 columns">
-				<div class="imagebox" style="background-image:url('{{item.img}}');"></div>
+				<u>
+					<li class="imagebox"><img ng-src="{{selectedImage}}"></li>
+					<li class="imagebox" ng-repeat="image in item.images" ng-click="setImage(image)"><img ng-src="{{image}}"></li>
+				</u>
+				
 			</div>
 			<div class="small-8 columns content">
+				<div class="off-label"><span>{{item.off}}%</span><span class="off">OFF</span></div>
 				<h2>{{item.title}}</h2>
 				<h5>{{item.subtitle}}</h5>
 				<span>Sizes:</span>
 				<ul class="button-group">
-					<li ng-repeat="size in item.sizes"><a class="button cc-size tiny secondary" ng-click="sizeBtnToggle(size)" 
+					<li ng-repeat="size in item.sizes">
+						<a class="button cc-size tiny secondary" ng-click="sizeBtnToggle(size)" 
 						ng-class="{ selected: sizeBtn[size] }" >{{size}}</a>
 					</li>
 				</ul>
