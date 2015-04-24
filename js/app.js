@@ -15,11 +15,15 @@ cchopApp.config(['$routeProvider',function($routeProvider){
 	 }).
 	 when('/item/:itemId',{
 		templateUrl: 'partials/view-item.html',
-		controller: 'ViewitemCtrl'
+		controller: 'ViewItemCtrl'
 	 }).
 	 when('/list/:listId',{
-	 	templateUrl:'partials/view-list.html',
-	 	controller: 'ViewlistCtrl'
+	 	templateUrl: 'partials/view-list.html',
+	 	controller: 'ViewListCtrl'
+	 }).
+	 when('/cart', {
+	 	templateUrl: 'partials/view-cart.html',
+	 	controller: 'ViewCartCtrl'
 	 }).
 	 otherwise({
 		redirectTo: '/frontpage'

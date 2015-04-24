@@ -9,31 +9,67 @@ cchopControllers.controller('FrontpageCtrl', ['$scope' ,'$http',
 	});
 }]);
 
-cchopControllers.controller('ViewitemCtrl',['$scope','$http','$routeParams','item_feed_value',
- function($scope,$http,$routeParams,feedTemplateURL){
+cchopControllers.controller('ViewItemCtrl',['$scope','$http','$routeParams','item_feed_value','shoppingCart',
+ function($scope,$http,$routeParams,feedTemplateURL,shoppingCart){
  	var url = null;
+ 	$scope.itemId = $routeParams.itemId;
+ 	$scope.hasOff = false;
+ 	// initilize default order piece
+ 	$scope.piecesOrdered = 1;
 
- 	// Size selector
+ 	// Add to Cart
+ 	$scope.add2Cart = function() {
+ 		var sCart = {};
+ 		// Setting shopping cart values
+ 		for (var index in $scope.sizeBtn)
+ 			if ($scope.sizeBtn[index]) sCart.size = index;
+ 		for (var index in $scope.colorBtn)
+ 			if ($scope.colorBtn[index]) sCart.color = index;
+
+ 		sCart.id = $scope.itemId;
+ 		sCart.title = $scope.item.title;
+ 		sCart.img = $scope.selectedImage;
+ 		sCart.off = $scope.item.off;
+ 		sCart.price = $scope.getFinalPrice();
+ 		sCart.pieces = $scope.piecesOrdered;
+
+ 		shoppingCart.add2Cart(sCart);
+ 		$('#cartModal').foundation('reveal', 'open');
+ 	}
+ 	$scope.closeModal = function() {
+ 		$('#cartModal').foundation('reveal', 'close');
+ 	}
+ 	// Size selector ON/OFF buton
  	$scope.sizeBtn = {};
  	$scope.sizeBtnToggle = function(size) {
- 		$scope.sizeBtn[size] = !$scope.sizeBtn[size];
+ 		var currentBtnValue = $scope.sizeBtn[size];
+ 		_turnoff($scope.sizeBtn);
+ 		$scope.sizeBtn[size] = !currentBtnValue;
  	}
- 	// Color selector
+ 	// Color selector ON/OFF button
  	$scope.colorBtn = {};
  	$scope.colorBtnToggle = function(color) {
- 		$scope.colorBtn[color] = !$scope.colorBtn[color];
+ 		var currentBtnValue = $scope.colorBtn[color];
+ 		_turnoff($scope.colorBtn);
+ 		$scope.colorBtn[color] = !currentBtnValue;
  	}
- 	// Creating item feed URL to fetch data
- 	url = feedTemplateURL.replace('[PRODUCTID]',$routeParams.itemId);
+ 	// Turn off button groups ( size and color)
+ 	var _turnoff = function(btnObject) {
+ 		for (index in btnObject)
+ 			btnObject[index] = false;
+ 	}
+ 	// Generating JSON data URL
+ 	// [PRODUCTID] is a placeholder for item's ID
+ 	url = feedTemplateURL.replace('[PRODUCTID]',$scope.itemId);
  	$http.get(url).success(function(data) {
  		$scope.item = data;
- 		// Seperate sizes, images and colors string to Arrays
+ 		// Seperate sizes, images and colors from string to Arrays
  		$scope.item.sizes = data.available_sizes.split('|');
  		$scope.item.colors = data.available_colors.split('|');
  		$scope.item.images = data.img.split('|');
  		// Image settings
  		$scope.selectedImage = $scope.item.images[0];
- 		$scope.setImage = function(imageAddr) {
+ 		$scope.changeImage = function(imageAddr) {
  			$scope.selectedImage = imageAddr;
  		}
  		// Calculate discount if it's not zero
@@ -55,7 +91,7 @@ cchopControllers.controller('ViewitemCtrl',['$scope','$http','$routeParams','ite
 
 // Controling the page that show lists of different items
 // Dependency Injected 'list' is a provider in services.js
-cchopControllers.controller('ViewlistCtrl',['$scope','$http','$routeParams','list','$location',
+cchopControllers.controller('ViewListCtrl',['$scope','$http','$routeParams','list','$location',
  function($scope,$http,$routeParams,list,$location) {
  	$scope.goToItem = function(id) {
  		$location.url('item/'+id);
@@ -67,5 +103,23 @@ cchopControllers.controller('ViewlistCtrl',['$scope','$http','$routeParams','lis
  	list.res().then(function(res) {
  		$scope.list = res.data;
  	});
- 	
+ 	// Re-run foundation initialization to activate Mangellan addon script
+ 	$(document).foundation();
+}]);
+
+// Top navbar controller
+cchopControllers.controller('NavbarCtrl' , ['$scope','shoppingCart',function($scope,shoppingCart) {
+	$scope.getCart = function() {
+		var itemsInCart = shoppingCart.getCart().length;
+		// Show 'No items' in view instead of '0 items'
+		if (itemsInCart === 0)
+			return 'No';
+		else
+			return itemsInCart;
+	}
+}]);
+
+cchopControllers.controller('ViewCartCtrl', ['$scope','shoppingCart',function($scope,shoppingCart) {
+	$scope.shoppingCart = shoppingCart.getCart();
+	$scope.cartTotalPrice = shoppingCart.getCartTotalPrice();
 }]);
