@@ -19,31 +19,37 @@
     </div>
   </div>
   <div class="medium-7 columns">
-    <div class="row medium-collapse" >
+    <div class="row collapse" >
       <div class="large-12 columns">
-        <div class="large-8 medium-6 columns cc-box offer-special">
-          <div></div>
-        </div>
-        <!-- offer-y one block -->
-        <div class="large-4 medium-6 columns cc-box offer-y">
-          <div class="row">
-            <span class="title">{{offers[0].title}}</span>
-            <span class="subtitle">{{offers[0].subtitle}}</span>
-            <img ng-src="{{offers[0].img}}">
+        <div class="row collapse" >
+          <div class="large-8 medium-6 small-12 columns cc-box offer-special">
+            <div></div>
           </div>
-        </div>
+          <!-- offer-y one block -->
+          <div class="large-4 medium-6 small-6 columns cc-box offer-y">
+            <div class="row">
+              <div class="holder">
+                <img ng-src="{{offers[0].img}}">
+                <span class="cc-label">{{offers[0].title}} - 8.99 USD</span>
+              </div>
+            </div>
+          </div>
         <!-- offer-y block end -->
+        </div>
       </div>
       <div class="large-12 columns">
-        <!-- offer-y blocks (3 blocks) -->
-        <div class="large-4 small-6 columns cc-box offer-y" 
-         ng-repeat="offer in offers.slice(1,4)">
-          <div class="row">
-            <span class="title">{{offer.title}}</span>
-            <span class="subtitle">{{offer.subtitle}}</span>
-            <img ng-src="{{offer.img}}">
+        <div class="row collapse">
+          <!-- offer-y blocks (3 blocks) -->
+          <div class="large-4 small-6 columns cc-box offer-y" 
+           ng-repeat="offer in offers.slice(1,4)">
+            <div class="row">
+              <div class="holder">
+                <img ng-src="{{offer.img}}">
+                <span class="cc-label">{{offer.title}} - 8.99 USD</span>
+              </div>
+            </div>
+            <!-- offer block end -->
           </div>
-          <!-- offer block end -->
         </div>
         
       </div>

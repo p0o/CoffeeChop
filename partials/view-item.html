@@ -4,7 +4,7 @@
 			<div class="small-4 columns">
 				<u>
 					<li class="imagebox"><img ng-src="{{selectedImage}}"></li>
-					<li class="imagebox" ng-repeat="image in item.images" ng-click="setImage(image)"><img ng-src="{{image}}"></li>
+					<li class="imagebox" ng-repeat="image in item.images" ng-click="changeImage(image)"><img ng-src="{{image}}"></li>
 				</u>
 				
 			</div>
@@ -12,22 +12,36 @@
 				<div class="off-label"><span>{{item.off}}%</span><span class="off">OFF</span></div>
 				<h2>{{item.title}}</h2>
 				<h5>{{item.subtitle}}</h5>
-				<span>Sizes:</span>
-				<ul class="button-group">
-					<li ng-repeat="size in item.sizes">
-						<a class="button cc-size tiny secondary" ng-click="sizeBtnToggle(size)" 
-						ng-class="{ selected: sizeBtn[size] }" >{{size}}</a>
-					</li>
-				</ul>
-				<span>Colors:</span>
-				<ul class="button-group">
-					<li ng-repeat="color in item.colors"><a class="button cc-color tiny secondary" 
-						style="background-color:{{color}}" ng-class="{selected: colorBtn[color]}" 
-						ng-click="colorBtnToggle(color)"></a>
-					</li>
-				</ul>
-				<span class="label secondary with-off" ng-show="{hasOff()}">${{item.price}}</span>
-				<span class="label secondary round">${{ getFinalPrice() }}</span>
+				<div class="row">
+					<div class="large-6 columns">
+						
+						<span>Sizes:</span>
+						<ul class="button-group">
+							<li ng-repeat="size in item.sizes">
+								<a class="button cc-size tiny secondary" ng-click="sizeBtnToggle(size)" 
+								ng-class="{ selected: sizeBtn[size] }" >{{size}}</a>
+							</li>
+						</ul>
+						<span>Colors:</span>
+						<ul class="button-group">
+							<li ng-repeat="color in item.colors"><a class="button cc-color tiny secondary" 
+								style="background-color:{{color}}" ng-class="{selected: colorBtn[color]}" 
+								ng-click="colorBtnToggle(color)"></a>
+							</li>
+						</ul>
+					</div>
+					<div class="large-6 columns">
+						<span>Pieces:</span>
+						<input type="number" ng-model="piecesOrdered" min="0" max="50">
+						<a class="button radius" ng-click="add2Cart()">Add to cart</a>
+					</div>
+				</div>
+				<span class="label secondary with-off" ng-show="hasOff">
+					${{(item.price * piecesOrdered).toFixed(2)}}
+				</span>
+				<span class="label secondary round">
+					${{ (getFinalPrice() * piecesOrdered).toFixed(2) }}
+				</span>
 				<p>{{item.description}}</p>
 			</div>
 		</div>
@@ -36,3 +50,19 @@
 	</div>
 </div>
 
+<!-- Size Classes: [small medium large xlarge expand] -->
+
+<div id="cartModal" class="reveal-modal medium" data-reveal>
+  <h2>Now what?</h2>
+  <p class="lead">Thanks for your interest.</p>
+  <p>Your item is added to your shopping cart, now you can finalize your payment or continue shopping.</p>
+  <!-- Button Group Optional Classes: [radius round] -->
+  <ul class="button-group">
+    <!-- Button Color Classes: [secondary alert success] -->
+    <!-- Button Size Classes: [tiny small large] -->
+    <li><a href="#/cart" class="button secondary" ng-click="closeModal()">Buy Now</a></li>
+    <li><a href="#/item/{{itemId}}" class="button" ng-click="closeModal()">Continue shopping</a></li>
+  </ul>
+
+  <a class="close-reveal-modal">&#215;</a>
+</div>
