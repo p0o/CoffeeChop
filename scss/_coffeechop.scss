@@ -11,6 +11,9 @@ $body-bg: $cc-gray !default;
 // grid settings
 $row-width: rem-calc(1200);
 
+// Tables settings
+$table-margin-bottom: 0;
+$table-border-size: 0;
 
 // top-bar settings
 $topbar-bg-color: $cc-white;
@@ -38,6 +41,8 @@ span.label {
 .cc-white-bg {
   background: $cc-white;
 }
+
+
 
 // header in main deal holder
 .cc-topblock {
@@ -81,11 +86,49 @@ span.label {
   span.subtitle {
     margin-bottom: rem-calc(25);
   }
-  img {
-    max-height: rem-calc(180);
+  .row {
+    //padding: 0!important;
   }
-  
+  .holder {
+    position: relative;
+    max-width:100%;
+    max-height:rem-calc(235);
+    overflow: hidden;
+    img {
+      max-width: rem-calc(300);
+      float: left!important;
+      margin-left: -75px;
+      transition: all 0.3s;
+    }
+    span.cc-label {
+      position: absolute;
+      bottom:0;
+      left: 0;
+      text-align: center;
+      z-index: 3;
+      width: 100%;
+      padding: 6px 5px;
+      color: lighten($cc-black,25%);
+      font-size: rem-calc(14);
+      font-weight: bold;
+      background: rgba(255,255,255,0.5);
+      transition: color 0.3s;
+    }
+
+  }
+
 }
+.offer-y:hover {
+    .holder {
+      img {
+        max-width: rem-calc(320);
+      }
+      span.cc-label {
+        color: $cc-black;
+      }
+    }
+  }
+
 .offer-special {
   height:rem-calc(250);
 }
@@ -152,6 +195,7 @@ span.label {
 }
 
 .cc-listbox {
+  padding-top: rem-calc(20);
   padding-bottom: rem-calc(10);
   
   .row {
@@ -299,3 +343,47 @@ span.label {
   }
 }
 
+// view-cart.html shopping cart table
+.cc-cart-table {
+  td,th {
+    text-align: center;
+    .cc-color {
+      border-radius:20px;
+    }
+  }
+  .img-holder {
+    height:rem-calc(100);
+    overflow: hidden;
+    img {
+      margin-top: 0;
+      height: rem-calc(200);
+      transition: all 0.7s;
+    }
+    img:hover {
+      margin-top: -100px;
+    }
+  }
+  
+}
+.cc-cart-result-table {
+ float: right;
+ td,th {
+    text-align: center;
+  }
+}
+
+#filter-bar {
+  background: lighten($cc-gray,5%);
+  border-bottom: 4px solid $cc-red;
+  .cc-tag {
+    background-color: $cc-gray;
+    color: lighten($cc-black,20%);
+  }
+  .cc-tag.selected {
+    background-color: $cc-blue;
+    color: $cc-white;
+  }
+  .cc-tag.selected:hover {
+    background-color: darken($cc-blue,10%);
+  }
+}

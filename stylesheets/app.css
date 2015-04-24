@@ -1,4 +1,4 @@
-/* line 32, ../scss/_coffeechop.scss */
+/* line 35, ../scss/_coffeechop.scss */
 span.label {
   font-size: 0.875rem;
   display: block !important;
@@ -6,12 +6,12 @@ span.label {
   margin: 0.625rem auto;
 }
 
-/* line 38, ../scss/_coffeechop.scss */
+/* line 41, ../scss/_coffeechop.scss */
 .cc-white-bg {
   background: #fff;
 }
 
-/* line 43, ../scss/_coffeechop.scss */
+/* line 48, ../scss/_coffeechop.scss */
 .cc-topblock {
   background: #fff;
   border-bottom: 0.0625rem solid #e6e6e6;
@@ -23,7 +23,7 @@ span.label {
   margin: 0;
   padding: 0;
 }
-/* line 52, ../scss/_coffeechop.scss */
+/* line 57, ../scss/_coffeechop.scss */
 .cc-topblock h3.header-text {
   margin-top: 0.625rem;
   font-size: 1.125rem;
@@ -31,50 +31,84 @@ span.label {
   height: 1.25rem;
   overflow: hidden;
 }
-/* line 59, ../scss/_coffeechop.scss */
+/* line 64, ../scss/_coffeechop.scss */
 .cc-topblock a {
   height: 1.25rem;
   display: block;
 }
 
-/* line 68, ../scss/_coffeechop.scss */
+/* line 73, ../scss/_coffeechop.scss */
 .offer-x {
   height: 10.41666rem;
 }
-/* line 71, ../scss/_coffeechop.scss */
+/* line 76, ../scss/_coffeechop.scss */
 .offer-x span.title {
   margin-bottom: 2.5rem;
 }
-/* line 74, ../scss/_coffeechop.scss */
+/* line 79, ../scss/_coffeechop.scss */
 .offer-x img {
   max-height: 9.375rem;
 }
 
-/* line 78, ../scss/_coffeechop.scss */
+/* line 83, ../scss/_coffeechop.scss */
 .offer-y {
   height: 15.625rem;
 }
-/* line 81, ../scss/_coffeechop.scss */
+/* line 86, ../scss/_coffeechop.scss */
 .offer-y span.subtitle {
   margin-bottom: 1.5625rem;
 }
-/* line 84, ../scss/_coffeechop.scss */
-.offer-y img {
-  max-height: 11.25rem;
+/* line 92, ../scss/_coffeechop.scss */
+.offer-y .holder {
+  position: relative;
+  max-width: 100%;
+  max-height: 14.6875rem;
+  overflow: hidden;
+}
+/* line 97, ../scss/_coffeechop.scss */
+.offer-y .holder img {
+  max-width: 18.75rem;
+  float: left !important;
+  margin-left: -75px;
+  transition: all 0.3s;
+}
+/* line 103, ../scss/_coffeechop.scss */
+.offer-y .holder span.cc-label {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  text-align: center;
+  z-index: 3;
+  width: 100%;
+  padding: 6px 5px;
+  color: #404040;
+  font-size: 0.875rem;
+  font-weight: bold;
+  background: rgba(255, 255, 255, 0.5);
+  transition: color 0.3s;
 }
 
-/* line 89, ../scss/_coffeechop.scss */
+/* line 123, ../scss/_coffeechop.scss */
+.offer-y:hover .holder img {
+  max-width: 20rem;
+}
+/* line 126, ../scss/_coffeechop.scss */
+.offer-y:hover .holder span.cc-label {
+  color: #000;
+}
+
+/* line 132, ../scss/_coffeechop.scss */
 .offer-special {
   height: 15.625rem;
 }
 
-/* line 94, ../scss/_coffeechop.scss */
+/* line 137, ../scss/_coffeechop.scss */
 .cc-list {
   background: #fff;
   height: 31.25rem;
   border-right: 0.0625rem solid #e6e6e6;
 }
-/* line 99, ../scss/_coffeechop.scss */
+/* line 142, ../scss/_coffeechop.scss */
 .cc-list #list-header {
   margin: 0.9375rem 0;
   line-height: 1.875rem;
@@ -85,49 +119,49 @@ span.label {
   width: 100%;
   text-align: center;
 }
-/* line 109, ../scss/_coffeechop.scss */
+/* line 152, ../scss/_coffeechop.scss */
 .cc-list ul {
   margin-top: 1.5625rem;
   text-align: center;
 }
-/* line 112, ../scss/_coffeechop.scss */
+/* line 155, ../scss/_coffeechop.scss */
 .cc-list ul li > a {
   line-height: 2.5rem;
 }
-/* line 115, ../scss/_coffeechop.scss */
+/* line 158, ../scss/_coffeechop.scss */
 .cc-list ul li > a:nth-child(odd) {
   color: #E52E04;
 }
 
-/* line 122, ../scss/_coffeechop.scss */
+/* line 165, ../scss/_coffeechop.scss */
 .cc-box {
   background: #fff;
   border-bottom: 0.0625rem solid #e6e6e6;
   border-right: 0.0625rem solid #e6e6e6;
 }
-/* line 126, ../scss/_coffeechop.scss */
+/* line 169, ../scss/_coffeechop.scss */
 .cc-box .row {
   padding: 0.46875rem;
 }
-/* line 128, ../scss/_coffeechop.scss */
+/* line 171, ../scss/_coffeechop.scss */
 .cc-box .row span.title {
   font-size: 1rem;
   text-align: center;
   color: #4d4d4d;
   display: block;
 }
-/* line 134, ../scss/_coffeechop.scss */
+/* line 177, ../scss/_coffeechop.scss */
 .cc-box .row span.subtitle {
   font-size: 0.75rem;
   text-align: center;
   color: gray;
 }
-/* line 140, ../scss/_coffeechop.scss */
+/* line 183, ../scss/_coffeechop.scss */
 .cc-box .row img {
   float: right;
 }
 
-/* line 145, ../scss/_coffeechop.scss */
+/* line 188, ../scss/_coffeechop.scss */
 .cc-box:hover {
   position: relative;
   z-index: 2;
@@ -137,11 +171,12 @@ span.label {
   border: 0;
 }
 
-/* line 154, ../scss/_coffeechop.scss */
+/* line 197, ../scss/_coffeechop.scss */
 .cc-listbox {
+  padding-top: 1.25rem;
   padding-bottom: 0.625rem;
 }
-/* line 157, ../scss/_coffeechop.scss */
+/* line 201, ../scss/_coffeechop.scss */
 .cc-listbox .row {
   cursor: pointer;
   background: #fff;
@@ -150,7 +185,7 @@ span.label {
   border-bottom: -0.0625rem solid #e6e6e6;
   border-right: -0.0625rem solid #e6e6e6;
 }
-/* line 165, ../scss/_coffeechop.scss */
+/* line 209, ../scss/_coffeechop.scss */
 .cc-listbox .row .imagebox {
   width: 100%;
   display: block;
@@ -159,12 +194,12 @@ span.label {
   background-position: center top;
   transition: background-size 0.4s;
 }
-/* line 173, ../scss/_coffeechop.scss */
+/* line 217, ../scss/_coffeechop.scss */
 .cc-listbox .row h3 a {
   font-size: 0.9375rem;
   color: #4d4d4d;
 }
-/* line 178, ../scss/_coffeechop.scss */
+/* line 222, ../scss/_coffeechop.scss */
 .cc-listbox .row:hover {
   -webkit-box-shadow: 0px 2px 4px 0px gray;
   -moz-box-shadow: 0px 2px 4px 0px gray;
@@ -172,34 +207,34 @@ span.label {
   border: 0;
 }
 
-/* line 187, ../scss/_coffeechop.scss */
+/* line 231, ../scss/_coffeechop.scss */
 .cc-item {
   background: #fff;
   border-bottom: 0.0625rem solid #e6e6e6;
   border-right: 0.0625rem solid #e6e6e6;
 }
-/* line 191, ../scss/_coffeechop.scss */
+/* line 235, ../scss/_coffeechop.scss */
 .cc-item h2 {
   margin-top: 0.75rem;
   font-size: 1.375rem;
   line-height: 1.75rem;
   text-transform: uppercase;
 }
-/* line 197, ../scss/_coffeechop.scss */
+/* line 241, ../scss/_coffeechop.scss */
 .cc-item h5 {
   font-size: 0.9375rem;
   margin-top: -0.4375rem;
   line-height: 0.9375rem;
   color: #666666;
 }
-/* line 203, ../scss/_coffeechop.scss */
+/* line 247, ../scss/_coffeechop.scss */
 .cc-item span.label {
   font-size: 1.25rem;
   margin: 0.625rem 0 1.25rem 0;
   line-height: 1.875rem;
   width: 9.375rem;
 }
-/* line 209, ../scss/_coffeechop.scss */
+/* line 253, ../scss/_coffeechop.scss */
 .cc-item span.with-off {
   text-decoration: line-through;
   font-size: 1.25rem;
@@ -208,7 +243,7 @@ span.label {
   background: #eee;
   color: #b3b3b3;
 }
-/* line 217, ../scss/_coffeechop.scss */
+/* line 261, ../scss/_coffeechop.scss */
 .cc-item .imagebox {
   width: 4.0625rem;
   height: 4.0625rem;
@@ -218,24 +253,24 @@ span.label {
   display: inline-block;
   transition: all 0.4s;
 }
-/* line 225, ../scss/_coffeechop.scss */
+/* line 269, ../scss/_coffeechop.scss */
 .cc-item .imagebox img {
   width: 100%;
   background-size: 100% auto;
   background-position: center top;
 }
-/* line 231, ../scss/_coffeechop.scss */
+/* line 275, ../scss/_coffeechop.scss */
 .cc-item .imagebox:first-child {
   width: 100%;
   height: 16.875rem;
   margin-right: 0;
 }
-/* line 239, ../scss/_coffeechop.scss */
+/* line 283, ../scss/_coffeechop.scss */
 .cc-item .button.cc-size.selected {
   background-color: #2bb0e7;
   color: #fff;
 }
-/* line 243, ../scss/_coffeechop.scss */
+/* line 287, ../scss/_coffeechop.scss */
 .cc-item .button.cc-color {
   margin: 0.125rem;
   box-sizing: content-box;
@@ -243,15 +278,15 @@ span.label {
   border-radius: 20px;
   transition: all 0.5s;
 }
-/* line 250, ../scss/_coffeechop.scss */
+/* line 294, ../scss/_coffeechop.scss */
 .cc-item .button.cc-color.selected {
   border-color: #d4d4d4 !important;
 }
-/* line 255, ../scss/_coffeechop.scss */
+/* line 299, ../scss/_coffeechop.scss */
 .cc-item .content {
   padding-left: 1.25rem !important;
 }
-/* line 260, ../scss/_coffeechop.scss */
+/* line 304, ../scss/_coffeechop.scss */
 .cc-item .off-label {
   border-style: solid;
   border-color: #fb3d12;
@@ -262,7 +297,7 @@ span.label {
   float: right;
   margin: -1.5625rem -0.9375rem 0;
 }
-/* line 269, ../scss/_coffeechop.scss */
+/* line 313, ../scss/_coffeechop.scss */
 .cc-item .off-label span {
   position: relative;
   width: 100%;
@@ -276,13 +311,13 @@ span.label {
   font-size: 1rem;
   font-weight: bold;
 }
-/* line 282, ../scss/_coffeechop.scss */
+/* line 326, ../scss/_coffeechop.scss */
 .cc-item .off-label span.off {
   font-size: 0.8125rem;
   font-weight: normal;
   margin-top: 0;
 }
-/* line 289, ../scss/_coffeechop.scss */
+/* line 333, ../scss/_coffeechop.scss */
 .cc-item .off-label:after {
   content: "";
   position: absolute;
@@ -293,6 +328,59 @@ span.label {
   border-style: solid;
   border-color: #E52E04 transparent transparent transparent;
   border-width: 1.5625rem 1.5625rem 0 1.5625rem;
+}
+
+/* line 348, ../scss/_coffeechop.scss */
+.cc-cart-table td, .cc-cart-table th {
+  text-align: center;
+}
+/* line 350, ../scss/_coffeechop.scss */
+.cc-cart-table td .cc-color, .cc-cart-table th .cc-color {
+  border-radius: 20px;
+}
+/* line 354, ../scss/_coffeechop.scss */
+.cc-cart-table .img-holder {
+  height: 6.25rem;
+  overflow: hidden;
+}
+/* line 357, ../scss/_coffeechop.scss */
+.cc-cart-table .img-holder img {
+  margin-top: 0;
+  height: 12.5rem;
+  transition: all 0.7s;
+}
+/* line 362, ../scss/_coffeechop.scss */
+.cc-cart-table .img-holder img:hover {
+  margin-top: -100px;
+}
+
+/* line 368, ../scss/_coffeechop.scss */
+.cc-cart-result-table {
+  float: right;
+}
+/* line 370, ../scss/_coffeechop.scss */
+.cc-cart-result-table td, .cc-cart-result-table th {
+  text-align: center;
+}
+
+/* line 375, ../scss/_coffeechop.scss */
+#filter-bar {
+  background: #fbfbfb;
+  border-bottom: 4px solid #E52E04;
+}
+/* line 378, ../scss/_coffeechop.scss */
+#filter-bar .cc-tag {
+  background-color: #eee;
+  color: #333333;
+}
+/* line 382, ../scss/_coffeechop.scss */
+#filter-bar .cc-tag.selected {
+  background-color: #2bb0e7;
+  color: #fff;
+}
+/* line 386, ../scss/_coffeechop.scss */
+#filter-bar .cc-tag.selected:hover {
+  background-color: #1794c8;
 }
 
 /* line 348, ../bower_components/foundation/scss/foundation/components/_global.scss */
@@ -6589,8 +6677,8 @@ ul.pagination li {
 /* line 131, ../bower_components/foundation/scss/foundation/components/_tables.scss */
 table {
   background: #FFFFFF;
-  margin-bottom: 1.25rem;
-  border: solid 1px #DDDDDD;
+  margin-bottom: 0;
+  border: solid 0 #DDDDDD;
   table-layout: auto;
 }
 /* line 69, ../bower_components/foundation/scss/foundation/components/_tables.scss */
