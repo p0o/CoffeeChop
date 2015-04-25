@@ -2,14 +2,13 @@
 	{
 	  "id":"BCJ257",
 	  "list_id":"summer_dresses",
-	  "title":"Your e",
+	  "title":"Such a great looking dress",
 	  "subtitle":"get as much as you need!!",
 	  "img":"/images/sample1.jpg",
-	  "off":"0",
-	  "price":"8.99",
+	  "off":0,
+	  "price":12.99,
 	  "available_sizes":"S|M|L|XL",
-	  "available_colors":"#ec4300|#ec43ff|#436fff",
-	  "description":"2015 Free Shipping Summer hot selling shapers body cotton shirt women's cheap sarafan tank Tops long sport plus size corsets A06"
+	  "available_colors":"#ec4300|#ec43ff|#436fff"
 	},
 	{
 	  "id":"BCJ233",
@@ -17,11 +16,10 @@
 	  "title":"Such a great looking dress",
 	  "subtitle":"get as much as you need!!",
 	  "img":"/images/sample3.jpg",
-	  "off":"10",
-	  "price":"10.99",
+	  "off":10,
+	  "price":1.99,
 	  "available_sizes":"M|L|XL",
-	  "available_colors":"#ec4300|#ec43ff|#436fff",
-	  "description":"2015 Free Shipping Summer hot selling shapers body cotton shirt women's cheap sarafan tank Tops long sport plus size corsets A06"
+	  "available_colors":"#ec4300|#ec43ff|#436fff"
 	},
 	{
 	  "id":"BCJ212",
@@ -29,11 +27,10 @@
 	  "title":"Sexy looking skirts for you",
 	  "subtitle":"get as much as you need!!",
 	  "img":"/images/sample2.jpg",
-	  "off":"0",
-	  "price":"18.25",
+	  "off":5,
+	  "price":7.25,
 	  "available_sizes":"S|M|L|XL|XXL",
-	  "available_colors":"#ec4300|#ec43ff|#436fff",
-	  "description":"2015 Free Shipping Summer hot selling shapers body cotton shirt women's cheap sarafan tank Tops long sport plus size corsets A06"
+	  "available_colors":"#ec4300|#ec43ff|#436fff"
 	},
 	{
 	  "id":"BCJ257",
@@ -41,11 +38,10 @@
 	  "title":"Your beautiful blouse",
 	  "subtitle":"get as much as you need!!",
 	  "img":"/images/sample1.jpg",
-	  "off":"0",
-	  "price":"8.99",
+	  "off":0,
+	  "price":8.99,
 	  "available_sizes":"S|M|L|XL",
-	  "available_colors":"#ec4300|#ec43ff|#436fff",
-	  "description":"2015 Free Shipping Summer hot selling shapers body cotton shirt women's cheap sarafan tank Tops long sport plus size corsets A06"
+	  "available_colors":"#ec4300|#ec43ff|#436fff"
 	},
 	{
 	  "id":"BCJ233",
@@ -53,83 +49,43 @@
 	  "title":"Such a great looking dress",
 	  "subtitle":"get as much as you need!!",
 	  "img":"/images/sample2.jpg",
-	  "off":"10",
-	  "price":"10.99",
+	  "off":17,
+	  "price":2.99,
 	  "available_sizes":"M|L|XL",
-	  "available_colors":"#ec4300|#ec43ff|#436fff",
-	  "description":"2015 Free Shipping Summer hot selling shapers body cotton shirt women's cheap sarafan tank Tops long sport plus size corsets A06"
+	  "available_colors":"#ec4300|#ec43ff|#436fff"
 	},
 	{
 	  "id":"BCJ212",
-	  "list_id":"summer_dresses",
-	  "title":"Sexy looking skirts for you",
+	  "list_id":"summer_dresses|skirts",
+	  "title":"Sexy looking skirts for you + hot skirts",
 	  "subtitle":"get as much as you need!!",
 	  "img":"/images/sample2.jpg",
-	  "off":"0",
-	  "price":"18.25",
+	  "off":0,
+	  "price":2.25,
 	  "available_sizes":"S|M|L|XL|XXL",
-	  "available_colors":"#ec4300|#ec43ff|#436fff",
-	  "description":"2015 Free Shipping Summer hot selling shapers body cotton shirt women's cheap sarafan tank Tops long sport plus size corsets A06"
+	  "available_colors":"#ec4300|#ec43ff|#436fff"
 	},
 	{
 	  "id":"BCJ257",
 	  "list_id":"summer_dresses",
-	  "title":"Your beautiful blouse",
+	  "title":"Such a great looking dress",
 	  "subtitle":"get as much as you need!!",
 	  "img":"/images/sample1.jpg",
-	  "off":"0",
-	  "price":"8.99",
+	  "off":0,
+	  "price":12.99,
 	  "available_sizes":"S|M|L|XL",
-	  "available_colors":"#ec4300|#ec43ff|#436fff",
-	  "description":"2015 Free Shipping Summer hot selling shapers body cotton shirt women's cheap sarafan tank Tops long sport plus size corsets A06"
+	  "available_colors":"#ec4300|#ec43ff|#436fff"
 	},
 	{
 	  "id":"BCJ233",
 	  "list_id":"casual_dresses",
 	  "title":"Such a great looking dress",
-	  "subtitle":"get as much as you need!!",
-	  "img":"/images/sample2.jpg",
-	  "off":"10",
-	  "price":"10.99",
-	  "available_sizes":"M|L|XL",
-	  "available_colors":"#ec4300|#ec43ff|#436fff",
-	  "description":"2015 Free Shipping Summer hot selling shapers body cotton shirt women's cheap sarafan tank Tops long sport plus size corsets A06"
-	},
-	{
-	  "id":"BCJ212",
-	  "list_id":"summer_dresses",
-	  "title":"Sexy looking skirts for you",
 	  "subtitle":"get as much as you need!!",
 	  "img":"/images/sample3.jpg",
-	  "off":"0",
-	  "price":"18.25",
-	  "available_sizes":"S|M|L|XL|XXL",
-	  "available_colors":"#ec4300|#ec43ff|#436fff",
-	  "description":"2015 Free Shipping Summer hot selling shapers body cotton shirt women's cheap sarafan tank Tops long sport plus size corsets A06"
-	},
-	{
-	  "id":"BCJ257",
-	  "list_id":"summer_dresses",
-	  "title":"Your beautiful blouse",
-	  "subtitle":"get as much as you need!!",
-	  "img":"/images/sample1.jpg",
-	  "off":"0",
-	  "price":"8.99",
-	  "available_sizes":"S|M|L|XL",
-	  "available_colors":"#ec4300|#ec43ff|#436fff",
-	  "description":"2015 Free Shipping Summer hot selling shapers body cotton shirt women's cheap sarafan tank Tops long sport plus size corsets A06"
-	},
-	{
-	  "id":"BCJ233",
-	  "list_id":"casual_dresses",
-	  "title":"Such a great looking dress",
-	  "subtitle":"get as much as you need!!",
-	  "img":"/images/sample2.jpg",
-	  "off":"10",
-	  "price":"10.99",
+	  "off":10,
+	  "price":1.99,
 	  "available_sizes":"M|L|XL",
-	  "available_colors":"#ec4300|#ec43ff|#436fff",
-	  "description":"2015 Free Shipping Summer hot selling shapers body cotton shirt women's cheap sarafan tank Tops long sport plus size corsets A06"
+	  "available_colors":"#ec4300|#ec43ff|#436fff"
 	},
 	{
 	  "id":"BCJ212",
@@ -137,11 +93,10 @@
 	  "title":"Sexy looking skirts for you",
 	  "subtitle":"get as much as you need!!",
 	  "img":"/images/sample2.jpg",
-	  "off":"0",
-	  "price":"18.25",
+	  "off":5,
+	  "price":7.25,
 	  "available_sizes":"S|M|L|XL|XXL",
-	  "available_colors":"#ec4300|#ec43ff|#436fff",
-	  "description":"2015 Free Shipping Summer hot selling shapers body cotton shirt women's cheap sarafan tank Tops long sport plus size corsets A06"
+	  "available_colors":"#ec4300|#ec43ff|#436fff"
 	},
 	{
 	  "id":"BCJ257",
@@ -149,11 +104,10 @@
 	  "title":"Your beautiful blouse",
 	  "subtitle":"get as much as you need!!",
 	  "img":"/images/sample1.jpg",
-	  "off":"0",
-	  "price":"8.99",
+	  "off":0,
+	  "price":8.99,
 	  "available_sizes":"S|M|L|XL",
-	  "available_colors":"#ec4300|#ec43ff|#436fff",
-	  "description":"2015 Free Shipping Summer hot selling shapers body cotton shirt women's cheap sarafan tank Tops long sport plus size corsets A06"
+	  "available_colors":"#ec4300|#ec43ff|#436fff"
 	},
 	{
 	  "id":"BCJ233",
@@ -161,94 +115,21 @@
 	  "title":"Such a great looking dress",
 	  "subtitle":"get as much as you need!!",
 	  "img":"/images/sample2.jpg",
-	  "off":"10",
-	  "price":"10.99",
+	  "off":17,
+	  "price":2.99,
 	  "available_sizes":"M|L|XL",
-	  "available_colors":"#ec4300|#ec43ff|#436fff",
-	  "description":"2015 Free Shipping Summer hot selling shapers body cotton shirt women's cheap sarafan tank Tops long sport plus size corsets A06"
+	  "available_colors":"#ec4300|#ec43ff|#436fff"
 	},
 	{
 	  "id":"BCJ212",
-	  "list_id":"summer_dresses",
-	  "title":"Sexy looking skirts for you",
+	  "list_id":"summer_dresses|skirts",
+	  "title":"Sexy looking skirts for you + hot skirts",
 	  "subtitle":"get as much as you need!!",
 	  "img":"/images/sample2.jpg",
-	  "off":"0",
-	  "price":"18.25",
+	  "off":0,
+	  "price":2.25,
 	  "available_sizes":"S|M|L|XL|XXL",
-	  "available_colors":"#ec4300|#ec43ff|#436fff",
-	  "description":"2015 Free Shipping Summer hot selling shapers body cotton shirt women's cheap sarafan tank Tops long sport plus size corsets A06"
-	},
-	{
-	  "id":"BCJ257",
-	  "list_id":"summer_dresses",
-	  "title":"Your beautiful blouse",
-	  "subtitle":"get as much as you need!!",
-	  "img":"/images/sample1.jpg",
-	  "off":"0",
-	  "price":"8.99",
-	  "available_sizes":"S|M|L|XL",
-	  "available_colors":"#ec4300|#ec43ff|#436fff",
-	  "description":"2015 Free Shipping Summer hot selling shapers body cotton shirt women's cheap sarafan tank Tops long sport plus size corsets A06"
-	},
-	{
-	  "id":"BCJ233",
-	  "list_id":"casual_dresses",
-	  "title":"Such a great looking dress",
-	  "subtitle":"get as much as you need!!",
-	  "img":"/images/sample2.jpg",
-	  "off":"10",
-	  "price":"10.99",
-	  "available_sizes":"M|L|XL",
-	  "available_colors":"#ec4300|#ec43ff|#436fff",
-	  "description":"2015 Free Shipping Summer hot selling shapers body cotton shirt women's cheap sarafan tank Tops long sport plus size corsets A06"
-	},
-	{
-	  "id":"BCJ212",
-	  "list_id":"summer_dresses",
-	  "title":"Sexy looking skirts for you",
-	  "subtitle":"get as much as you need!!",
-	  "img":"/images/sample2.jpg",
-	  "off":"0",
-	  "price":"18.25",
-	  "available_sizes":"S|M|L|XL|XXL",
-	  "available_colors":"#ec4300|#ec43ff|#436fff",
-	  "description":"2015 Free Shipping Summer hot selling shapers body cotton shirt women's cheap sarafan tank Tops long sport plus size corsets A06"
-	},
-	{
-	  "id":"BCJ257",
-	  "list_id":"summer_dresses",
-	  "title":"Your beautiful blouse",
-	  "subtitle":"get as much as you need!!",
-	  "img":"/images/sample1.jpg",
-	  "off":"0",
-	  "price":"8.99",
-	  "available_sizes":"S|M|L|XL",
-	  "available_colors":"#ec4300|#ec43ff|#436fff",
-	  "description":"2015 Free Shipping Summer hot selling shapers body cotton shirt women's cheap sarafan tank Tops long sport plus size corsets A06"
-	},
-	{
-	  "id":"BCJ233",
-	  "list_id":"casual_dresses",
-	  "title":"Such a great looking dress",
-	  "subtitle":"get as much as you need!!",
-	  "img":"/images/sample2.jpg",
-	  "off":"10",
-	  "price":"10.99",
-	  "available_sizes":"M|L|XL",
-	  "available_colors":"#ec4300|#ec43ff|#436fff",
-	  "description":"2015 Free Shipping Summer hot selling shapers body cotton shirt women's cheap sarafan tank Tops long sport plus size corsets A06"
-	},
-	{
-	  "id":"BCJ212",
-	  "list_id":"skirts",
-	  "title":"Sexy looking skirts for you",
-	  "subtitle":"get as much as you need!!",
-	  "img":"/images/sample2.jpg",
-	  "off":"0",
-	  "price":"18.25",
-	  "available_sizes":"S|M|L|XL|XXL",
-	  "available_colors":"#ec4300|#ec43ff|#436fff",
-	  "description":"2015 Free Shipping Summer hot selling shapers body cotton shirt women's cheap sarafan tank Tops long sport plus size corsets A06"
+	  "available_colors":"#ec4300|#ec43ff|#436fff"
 	}
+	
 ]
