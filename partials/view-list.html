@@ -4,18 +4,21 @@
 			<div data-magellan-expedition="fixed" id="filter-bar">
 			  <dl class="sub-nav">
 			    <div class="row">
-			    	<div class="large-4 small-8 columns">
-			    		<span>Sort: </span>
-			    		<a hrfe="#" class="label cc-tag selected">Newer</a>
-			    		<a hrfe="#" class="label cc-tag">Cheaper</a>
-			    		
+			    	<div class="large-6 columns">
+			    		<small>Sort based on: &nbsp;</small>
+			    		<a href="#/list/{{listFilter.list_id}}/sort/newest" class="label cc-tag"
+			    		ng-class="{selected:sortType==='newest'}" ng-click="cancel($event)">Newest</a>
+			    		<a href="#/list/{{listFilter.list_id}}/sort/price" class="label cc-tag"
+			    		ng-class="{selected:sortType==='price'}">Price</a>
+			    		<a href="#/list/{{listFilter.list_id}}/sort/off" class="label cc-tag"
+			    		ng-class="{selected:sortType==='off'}">Discount</a>
 			    	</div>
-			    	<div class="large-8 small-4 columns">
+			    	<div class="large-6 columns">
 			    	</div>
 			    </div>
 			  </dl>
 			</div>
-			<div class="large-4 columns cc-listbox" ng-click="goToItem(item.id)" ng-repeat="item in list | filter:listFilter" >
+			<div class="large-4 small-6 columns cc-listbox end" ng-click="goToItem(item.id)" ng-repeat="item in list | orderBy:sorting | filter: listFilter" >
 				<div class="row">
 					<div class="imagebox" style="background-image:url('{{item.img}}');"></div>
 					<h3><a href="/#/item/{{item.id}}">{{item.title}}</a></h3>

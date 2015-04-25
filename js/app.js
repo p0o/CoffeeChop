@@ -21,6 +21,10 @@ cchopApp.config(['$routeProvider',function($routeProvider){
 	 	templateUrl: 'partials/view-list.html',
 	 	controller: 'ViewListCtrl'
 	 }).
+	 when('/list/:listId/sort/:sortType',{
+	 	templateUrl: 'partials/view-list.html',
+	 	controller: 'ViewListCtrl'
+	 }).
 	 when('/cart', {
 	 	templateUrl: 'partials/view-cart.html',
 	 	controller: 'ViewCartCtrl'
@@ -32,5 +36,5 @@ cchopApp.config(['$routeProvider',function($routeProvider){
 
 // Feeds used to load data
 cchopApp.value('frontpage_feed_value',  '/data/frontpage.json');
-cchopApp.value('list_feed_value',       '/data/products.json');
+cchopApp.value('list_feed_value',       '/data/products.json?ss=3357');
 cchopApp.value('item_feed_value',       '/data/item_[PRODUCTID].json?ss=3');

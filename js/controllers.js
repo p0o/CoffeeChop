@@ -93,16 +93,33 @@ cchopControllers.controller('ViewItemCtrl',['$scope','$http','$routeParams','ite
 // Dependency Injected 'list' is a provider in services.js
 cchopControllers.controller('ViewListCtrl',['$scope','$http','$routeParams','list','$location',
  function($scope,$http,$routeParams,list,$location) {
- 	$scope.goToItem = function(id) {
- 		$location.url('item/'+id);
- 	}
- 	// Using expression filtering
+ 	if ($routeParams.sortType === undefined)
+ 		$location.url($location.url() + '/sort/newest');
+ 	// Just for sending sortType to view
+ 	$scope.sortType = $routeParams.sortType;
+ 	// Using expression filtering to add filters
  	$scope.listFilter = {};
  	$scope.listFilter.list_id = $routeParams.listId;
+
+ 	// User selected sorting
+ 	if ($routeParams.sortType !== undefined) {
+ 		if ($routeParams.sortType === 'newest')
+ 			$scope.sorting = 'id';
+ 		if ($routeParams.sortType === 'price')
+ 			$scope.sorting = 'price';
+ 		if ($routeParams.sortType === 'off')
+ 			$scope.sorting = '-off';
+ 	}
+
  	// Waiting for asynchronous promise from $http
  	list.res().then(function(res) {
  		$scope.list = res.data;
  	});
+ 	// Method to redirect users to item's page by clicking on the whole div
+ 	$scope.goToItem = function(id) {
+ 		$location.url('item/'+id);
+ 	}
+
  	// Re-run foundation initialization to activate Mangellan addon script
  	$(document).foundation();
 }]);
