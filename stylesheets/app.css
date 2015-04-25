@@ -198,8 +198,10 @@ span.label {
 .cc-listbox .row h3 a {
   font-size: 0.9375rem;
   color: #4d4d4d;
+  display: block;
+  height: 3.125rem;
 }
-/* line 222, ../scss/_coffeechop.scss */
+/* line 224, ../scss/_coffeechop.scss */
 .cc-listbox .row:hover {
   -webkit-box-shadow: 0px 2px 4px 0px gray;
   -moz-box-shadow: 0px 2px 4px 0px gray;
@@ -207,34 +209,34 @@ span.label {
   border: 0;
 }
 
-/* line 231, ../scss/_coffeechop.scss */
+/* line 233, ../scss/_coffeechop.scss */
 .cc-item {
   background: #fff;
   border-bottom: 0.0625rem solid #e6e6e6;
   border-right: 0.0625rem solid #e6e6e6;
 }
-/* line 235, ../scss/_coffeechop.scss */
+/* line 237, ../scss/_coffeechop.scss */
 .cc-item h2 {
   margin-top: 0.75rem;
   font-size: 1.375rem;
   line-height: 1.75rem;
   text-transform: uppercase;
 }
-/* line 241, ../scss/_coffeechop.scss */
+/* line 243, ../scss/_coffeechop.scss */
 .cc-item h5 {
   font-size: 0.9375rem;
   margin-top: -0.4375rem;
   line-height: 0.9375rem;
   color: #666666;
 }
-/* line 247, ../scss/_coffeechop.scss */
+/* line 249, ../scss/_coffeechop.scss */
 .cc-item span.label {
   font-size: 1.25rem;
   margin: 0.625rem 0 1.25rem 0;
   line-height: 1.875rem;
   width: 9.375rem;
 }
-/* line 253, ../scss/_coffeechop.scss */
+/* line 255, ../scss/_coffeechop.scss */
 .cc-item span.with-off {
   text-decoration: line-through;
   font-size: 1.25rem;
@@ -243,7 +245,7 @@ span.label {
   background: #eee;
   color: #b3b3b3;
 }
-/* line 261, ../scss/_coffeechop.scss */
+/* line 263, ../scss/_coffeechop.scss */
 .cc-item .imagebox {
   width: 4.0625rem;
   height: 4.0625rem;
@@ -253,24 +255,24 @@ span.label {
   display: inline-block;
   transition: all 0.4s;
 }
-/* line 269, ../scss/_coffeechop.scss */
+/* line 271, ../scss/_coffeechop.scss */
 .cc-item .imagebox img {
   width: 100%;
   background-size: 100% auto;
   background-position: center top;
 }
-/* line 275, ../scss/_coffeechop.scss */
+/* line 277, ../scss/_coffeechop.scss */
 .cc-item .imagebox:first-child {
   width: 100%;
   height: 16.875rem;
   margin-right: 0;
 }
-/* line 283, ../scss/_coffeechop.scss */
+/* line 285, ../scss/_coffeechop.scss */
 .cc-item .button.cc-size.selected {
   background-color: #2bb0e7;
   color: #fff;
 }
-/* line 287, ../scss/_coffeechop.scss */
+/* line 289, ../scss/_coffeechop.scss */
 .cc-item .button.cc-color {
   margin: 0.125rem;
   box-sizing: content-box;
@@ -278,15 +280,15 @@ span.label {
   border-radius: 20px;
   transition: all 0.5s;
 }
-/* line 294, ../scss/_coffeechop.scss */
+/* line 296, ../scss/_coffeechop.scss */
 .cc-item .button.cc-color.selected {
   border-color: #d4d4d4 !important;
 }
-/* line 299, ../scss/_coffeechop.scss */
+/* line 301, ../scss/_coffeechop.scss */
 .cc-item .content {
   padding-left: 1.25rem !important;
 }
-/* line 304, ../scss/_coffeechop.scss */
+/* line 306, ../scss/_coffeechop.scss */
 .cc-item .off-label {
   border-style: solid;
   border-color: #fb3d12;
@@ -297,7 +299,7 @@ span.label {
   float: right;
   margin: -1.5625rem -0.9375rem 0;
 }
-/* line 313, ../scss/_coffeechop.scss */
+/* line 315, ../scss/_coffeechop.scss */
 .cc-item .off-label span {
   position: relative;
   width: 100%;
@@ -311,13 +313,13 @@ span.label {
   font-size: 1rem;
   font-weight: bold;
 }
-/* line 326, ../scss/_coffeechop.scss */
+/* line 328, ../scss/_coffeechop.scss */
 .cc-item .off-label span.off {
   font-size: 0.8125rem;
   font-weight: normal;
   margin-top: 0;
 }
-/* line 333, ../scss/_coffeechop.scss */
+/* line 335, ../scss/_coffeechop.scss */
 .cc-item .off-label:after {
   content: "";
   position: absolute;
@@ -330,57 +332,67 @@ span.label {
   border-width: 1.5625rem 1.5625rem 0 1.5625rem;
 }
 
-/* line 348, ../scss/_coffeechop.scss */
+/* line 350, ../scss/_coffeechop.scss */
 .cc-cart-table td, .cc-cart-table th {
   text-align: center;
 }
-/* line 350, ../scss/_coffeechop.scss */
+/* line 352, ../scss/_coffeechop.scss */
 .cc-cart-table td .cc-color, .cc-cart-table th .cc-color {
   border-radius: 20px;
 }
-/* line 354, ../scss/_coffeechop.scss */
+/* line 356, ../scss/_coffeechop.scss */
 .cc-cart-table .img-holder {
   height: 6.25rem;
   overflow: hidden;
 }
-/* line 357, ../scss/_coffeechop.scss */
+/* line 359, ../scss/_coffeechop.scss */
 .cc-cart-table .img-holder img {
   margin-top: 0;
+  width: auto !important;
   height: 12.5rem;
   transition: all 0.7s;
 }
-/* line 362, ../scss/_coffeechop.scss */
+/* line 365, ../scss/_coffeechop.scss */
 .cc-cart-table .img-holder img:hover {
   margin-top: -100px;
 }
 
-/* line 368, ../scss/_coffeechop.scss */
+/* line 371, ../scss/_coffeechop.scss */
 .cc-cart-result-table {
   float: right;
 }
-/* line 370, ../scss/_coffeechop.scss */
+/* line 373, ../scss/_coffeechop.scss */
 .cc-cart-result-table td, .cc-cart-result-table th {
   text-align: center;
 }
 
-/* line 375, ../scss/_coffeechop.scss */
+/* line 378, ../scss/_coffeechop.scss */
 #filter-bar {
   background: #fbfbfb;
-  border-bottom: 4px solid #E52E04;
+  border-bottom: 4px solid #2bb0e7;
 }
-/* line 378, ../scss/_coffeechop.scss */
+/* line 381, ../scss/_coffeechop.scss */
 #filter-bar .cc-tag {
-  background-color: #eee;
-  color: #333333;
+  background-color: #d4d4d4;
+  color: #000;
 }
-/* line 382, ../scss/_coffeechop.scss */
+/* line 385, ../scss/_coffeechop.scss */
+#filter-bar .cc-tag:hover {
+  background-color: #c8c8c8;
+}
+/* line 388, ../scss/_coffeechop.scss */
 #filter-bar .cc-tag.selected {
   background-color: #2bb0e7;
   color: #fff;
 }
-/* line 386, ../scss/_coffeechop.scss */
+/* line 392, ../scss/_coffeechop.scss */
 #filter-bar .cc-tag.selected:hover {
   background-color: #1794c8;
+}
+/* line 395, ../scss/_coffeechop.scss */
+#filter-bar small {
+  font-size: 0.8125rem;
+  color: #333333;
 }
 
 /* line 348, ../bower_components/foundation/scss/foundation/components/_global.scss */

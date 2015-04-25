@@ -217,6 +217,8 @@ span.label {
     h3 a {
       font-size: rem-calc(15);
       color: lighten($cc-black,30%);
+      display: block;
+      height: rem-calc(50);
     }
   }
   .row:hover {
@@ -356,6 +358,7 @@ span.label {
     overflow: hidden;
     img {
       margin-top: 0;
+      width:auto !important;
       height: rem-calc(200);
       transition: all 0.7s;
     }
@@ -374,10 +377,13 @@ span.label {
 
 #filter-bar {
   background: lighten($cc-gray,5%);
-  border-bottom: 4px solid $cc-red;
+  border-bottom: 4px solid $cc-blue;
   .cc-tag {
-    background-color: $cc-gray;
-    color: lighten($cc-black,20%);
+    background-color: darken($cc-gray,10%);
+    color: $cc-black;
+  }
+  .cc-tag:hover {
+    background-color: darken($cc-gray,15%);
   }
   .cc-tag.selected {
     background-color: $cc-blue;
@@ -385,5 +391,9 @@ span.label {
   }
   .cc-tag.selected:hover {
     background-color: darken($cc-blue,10%);
+  }
+  small {
+    font-size: rem-calc(13);
+    color: lighten($cc-black,20%);
   }
 }
