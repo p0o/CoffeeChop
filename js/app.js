@@ -3,10 +3,11 @@ Loading Angularjs app module
 written by Pooria Attarzadeh - github.com/p0o
 =========================================================================*/
 
-var cchopApp = angular.module('cchopApp',['ngRoute','cchopControllers','cchopServices']);
+var cchopApp = angular.module('cchopApp',
+	['ngRoute','cchopControllers','cchopServices','cchopAnimations']);
 
 // App URL routes
-cchopApp.config(['$routeProvider',function($routeProvider){
+cchopApp.config(['$routeProvider','$locationProvider',function($routeProvider, $locationProvider){
 
 	$routeProvider.
 	 when('/frontpage',{
@@ -31,10 +32,12 @@ cchopApp.config(['$routeProvider',function($routeProvider){
 	 }).
 	 otherwise({
 		redirectTo: '/frontpage'
-	 });
+	});
+
+	//$locationProvider.html5Mode(true);
 }]);
 
 // Feeds used to load data
 cchopApp.value('frontpage_feed_value',  '/data/frontpage.json');
-cchopApp.value('list_feed_value',       '/data/products.json?ss=3357');
-cchopApp.value('item_feed_value',       '/data/item_[PRODUCTID].json?ss=3');
+cchopApp.value('list_feed_value',       '/data/products.json');
+cchopApp.value('item_feed_value',       '/data/item_[PRODUCTID].json');
