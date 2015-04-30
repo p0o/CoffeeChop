@@ -1,0 +1,20 @@
+.cc-view.ng-enter,
+.cc-view.ng-enter,
+.cc-view.ng-enter {
+  -webkit-transition: 0.2s  all ease-in;
+  -moz-transition: 0.2s  all ease-in;
+  -o-transition: 0.2s  all ease-in;
+  transition: 0.2s  all ease-in;
+}
+
+.cc-view.ng-enter {
+  position: relative;
+  opacity:0;
+  bottom: -30px;
+
+}
+.cc-view.ng-enter.ng-enter-active {
+  position: relative;
+  opacity:1;
+  bottom: 0;
+}

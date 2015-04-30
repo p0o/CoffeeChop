@@ -40,6 +40,7 @@ span.label {
 }
 .cc-white-bg {
   background: $cc-white;
+  overflow: hidden;
 }
 
 
@@ -194,6 +195,7 @@ span.label {
   border:0;
 }
 
+// view-list.html stylesheet
 .cc-listbox {
   padding-top: rem-calc(20);
   padding-bottom: rem-calc(10);
@@ -230,6 +232,7 @@ span.label {
   }
 }
 
+// view-item.html stylesheet
 .cc-item {
   background: $cc-white;
   border-bottom: rem-calc(1) solid lighten($cc-black,90%);
@@ -295,7 +298,9 @@ span.label {
   }
   .button.cc-color.selected {
     border-color: darken($cc-gray,10%)!important;
-    
+  }
+  input[type=number]{
+    width: rem-calc(70);
   }
   // Content holder in item view
   .content {
@@ -381,6 +386,7 @@ span.label {
   .cc-tag {
     background-color: darken($cc-gray,10%);
     color: $cc-black;
+    transition: background 0.3s;
   }
   .cc-tag:hover {
     background-color: darken($cc-gray,15%);

@@ -122,6 +122,8 @@ cchopControllers.controller('ViewListCtrl',['$scope','$http','$routeParams','lis
 
  	// Re-run foundation initialization to activate Mangellan addon script
  	$(document).foundation();
+
+ 	
 }]);
 
 // Top navbar controller
