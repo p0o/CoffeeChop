@@ -72,15 +72,38 @@ span.label {
 
 // deal cells
 .offer-x {
-  height: rem-calc(166.6666);	
+  position: relative;
+  height: rem-calc(166.6666);
+  overflow: hidden;
+  .offer-x-bg {
+    position: aboslute;
+    z-index: 2;
+    top: 0;
+    left: 0;
+    margin:-7.5px 0 0 -7.5px;
+    width: 110%;
+    height: rem-calc(166.6666);
+    background-size: cover!important;
+    background-repeat: no-repeat;
+    background-position: top center; 
+    transition: all 0.7s;
+    -webkit-filter: opacity(0);
+    filter: opacity(0);
+  }
+  .offer-x-bg:hover {
+    -webkit-filter: opacity(0.2);
+    filter: opacity(0.2);
+  }
   // adding some individual settings for offer view
   span.title {
     margin-bottom: rem-calc(40);
   }
   img {
     max-height: rem-calc(150);
+    transition: all 0.5s;
   }
 }
+
 .offer-y {
   height: rem-calc(250);
   // adding some individual settings for offer view
@@ -167,12 +190,13 @@ span.label {
   background: $cc-white;
   border-bottom: rem-calc(1) solid lighten($cc-black,90%);
   border-right: rem-calc(1) solid lighten($cc-black,90%);
+  cursor: pointer;
   .row {
     padding: rem-calc(7.5);
-    span.title {
+    span.title a {
       font-size: rem-calc(16);
       text-align:center;
-      color: lighten($cc-black,30%);
+      color: lighten($cc-black,0);
       display: block;
     }
     span.subtitle {

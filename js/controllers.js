@@ -1,12 +1,15 @@
 var cchopControllers = angular.module('cchopControllers',[]);
 
-cchopControllers.controller('FrontpageCtrl', ['$scope' ,'$http',
- function($scope,$http) {
+cchopControllers.controller('FrontpageCtrl', ['$scope' ,'$http','$location',
+ function($scope,$http,$location) {
 	$http.get('data/frontpage.json').success(function(data){
 		$scope.lists = data.lists;
 		$scope.offs = data.offs;
 		$scope.offers = data.offers;
 	});
+	$scope.goToItem = function(id) {
+		$location.url('/item/'+id);
+	}
 }]);
 
 cchopControllers.controller('ViewItemCtrl',['$scope','$http','$routeParams','item_feed_value','shoppingCart',
