@@ -3,7 +3,8 @@
   <div class="medium-5 columns">
     <div class="row collapse" >
       <!-- offer-x block -->
-      <div class="large-12 columns offer-x cc-box" ng-repeat="off in offs">
+      <div class="large-12 columns offer-x cc-box" ng-repeat="off in offs" 
+       ng-click="goToItem(off.id)">
         <div class="row collapse">
           <div class="small-7 columns">
             <div class="row">
@@ -12,7 +13,8 @@
               <span class="label secondary">${{off.price}}</span>
             </div>
           </div>
-          <div class="small-5 columns"><img ng-src="{{off.img}}"></div>
+          <div class="small-5 columns cc-img"><img ng-src="{{off.img}}"></div>
+          <div class="offer-x-bg" style="background-image:url({{off.img}})"></div>
         </div>
       </div>
       <!-- offer-x block end-->
@@ -26,30 +28,30 @@
             <div></div>
           </div>
           <!-- offer-y one block -->
-          <div class="large-4 medium-6 small-12 columns cc-box offer-y">
+          <div class="large-4 medium-6 small-12 columns cc-box offer-y" ng-click="goToItem(offers[0].id)">
             <div class="row">
               <div class="holder">
                 <img ng-src="{{offers[0].img}}">
-                <span class="cc-label">{{offers[0].title}} - 8.99 USD</span>
+                <span class="cc-label">{{offers[0].title}} - {{offers[0].price}} USD</span>
               </div>
             </div>
           </div>
-        <!-- offer-y block end -->
+          <!-- offer-y one block end -->
         </div>
       </div>
       <div class="large-12 columns">
         <div class="row collapse">
           <!-- offer-y blocks (3 blocks) -->
           <div class="large-4 small-6 columns cc-box offer-y end" 
-           ng-repeat="offer in offers.slice(1,4)">
+           ng-repeat="offer in offers.slice(1,4)" ng-click="goToItem(offer.id)">
             <div class="row">
               <div class="holder">
                 <img ng-src="{{offer.img}}">
-                <span class="cc-label">{{offer.title}} - 8.99 USD</span>
+                <span class="cc-label">{{offer.title}} - {{offer.price}} USD</span>
               </div>
             </div>
-            <!-- offer block end -->
           </div>
+          <!-- offer block end -->
         </div>
         
       </div>
