@@ -6,6 +6,9 @@ cchopControllers.controller('FrontpageCtrl', ['$scope' ,'$http','$location',
 		$scope.lists = data.lists;
 		$scope.offs = data.offs;
 		$scope.offers = data.offers;
+		$scope.slides = data.slides;
+
+
 	});
 	$scope.goToItem = function(id) {
 		$location.url('/item/'+id);
@@ -23,7 +26,7 @@ cchopControllers.controller('ViewItemCtrl',['$scope','$http','$routeParams','ite
  	// Add to Cart
  	$scope.add2Cart = function() {
  		var sCart = {};
- 		// Setting shopping cart values
+ 		// Sending ordered values to shopping cart
  		for (var index in $scope.sizeBtn)
  			if ($scope.sizeBtn[index]) sCart.size = index;
  		for (var index in $scope.colorBtn)
@@ -66,6 +69,8 @@ cchopControllers.controller('ViewItemCtrl',['$scope','$http','$routeParams','ite
  	url = feedTemplateURL.replace('[PRODUCTID]',$scope.itemId);
  	$http.get(url).success(function(data) {
  		$scope.item = data;
+ 		// Informing the view that data is loaded now
+ 		$scope.dataIsLoaded=true;
  		// Seperate sizes, images and colors from string to Arrays
  		$scope.item.sizes = data.available_sizes.split('|');
  		$scope.item.colors = data.available_colors.split('|');

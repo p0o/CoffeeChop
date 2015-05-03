@@ -31,6 +31,25 @@ $topbar-dropdown-link-bg: $cc-white !default;
 $topbar-dropdown-link-bg-hover: lighten($cc-gray,5) !default;
 $topbar-dropdown-toggle-color: $cc-black;
 
+// mixins
+
+@mixin cc-label() {
+  position: absolute;
+  bottom:0;
+  left: 0;
+  text-align: center;
+  z-index: 3;
+  width: 100%;
+  padding: 6px 5px;
+  color: lighten($cc-black,25%);
+  font-size: rem-calc(14);
+  font-weight: bold;
+  background: rgba(255,255,255,0.5);
+  transition: color 0.3s;
+}
+
+
+
 // General styles
 span.label {
   font-size: rem-calc(14) ;
@@ -86,7 +105,7 @@ span.label {
     background-size: cover!important;
     background-repeat: no-repeat;
     background-position: top center; 
-    transition: all 0.7s;
+    transition: all 0.3s;
     -webkit-filter: opacity(0);
     filter: opacity(0);
   }
@@ -125,18 +144,7 @@ span.label {
       transition: all 0.3s;
     }
     span.cc-label {
-      position: absolute;
-      bottom:0;
-      left: 0;
-      text-align: center;
-      z-index: 3;
-      width: 100%;
-      padding: 6px 5px;
-      color: lighten($cc-black,25%);
-      font-size: rem-calc(14);
-      font-weight: bold;
-      background: rgba(255,255,255,0.5);
-      transition: color 0.3s;
+      @include cc-label();
     }
 
   }
@@ -154,7 +162,17 @@ span.label {
   }
 
 .offer-special {
+  padding: rem-calc(7.5)!important;
   height:rem-calc(250);
+  overflow: hidden;
+  .cc-imgpadding {
+    position:relative;
+    height:rem-calc(235);
+    overflow: hidden;
+    span.cc-label {
+      @include cc-label();
+    }
+  }
 }
 
 // left list which will disapear in small screens
@@ -178,10 +196,14 @@ span.label {
     text-align:center;
     li > a {
       line-height: rem-calc(40);
+      color: lighten($cc-black,20%);
+      transition: all 0.1s;
     }
-    li > a:nth-child(odd) {
-      color: $cc-red;
+    li > a:hover {
+      font-size: rem-calc(18);
+      color: lighten($cc-black,10%);
     }
+
   }
 }
 
@@ -425,5 +447,22 @@ span.label {
   small {
     font-size: rem-calc(13);
     color: lighten($cc-black,20%);
+  }
+}
+
+.cc-footer {
+  background: $cc-white;
+  margin: rem-calc(10) 0;
+  padding:rem-calc(7.5);
+  border-radius:rem-calc(5);
+  a {
+    color: lighten($cc-black,20%);
+  }
+  a:hover {
+    color: lighten($cc-black,10%);
+  }
+  .cc-separator:after {
+    content: " / ";
+    color: lighten($cc-black,50%);
   }
 }
