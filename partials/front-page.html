@@ -25,7 +25,16 @@
       <div class="large-12 columns">
         <div class="row collapse" >
           <div class="large-8 medium-6 small-12 columns cc-box offer-special">
-            <div></div>
+            <div class="cc-imageslider">
+              <!-- offer-special slide block -->
+              <slick init-onload=true data="slides" autoplay=true>
+                <div ng-repeat="slide in slides">
+                  <div class="cc-imgpadding"><a href="/#/item/{{slide.id}}"><img ng-src="{{slide.img}}">
+                  <span class="cc-label">{{slide.subtitle}}</span></a></div>
+                </div>
+              </slick>
+              <!-- offer-special slide block end-->
+            </div>
           </div>
           <!-- offer-y one block -->
           <div class="large-4 medium-6 small-12 columns cc-box offer-y" ng-click="goToItem(offers[0].id)">

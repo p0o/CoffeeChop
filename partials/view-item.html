@@ -1,6 +1,6 @@
 <div class="row collapse">
 	<div class="large-9 columns">
-		<div class="row columns cc-item collapse">
+		<div class="row columns cc-item collapse" ng-show="dataIsLoaded">
 			<div class="small-4 columns">
 				<u>
 					<li class="imagebox"><img ng-src="{{selectedImage}}"></li>
@@ -8,7 +8,7 @@
 				</u>
 				
 			</div>
-			<div class="small-8 columns content">
+			<div class="small-8 columns content" >
 				<div class="off-label"><span>{{item.off}}%</span><span class="off">OFF</span></div>
 				<h2>{{item.title}}</h2>
 				<h5>{{item.subtitle}}</h5>
