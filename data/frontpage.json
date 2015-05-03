@@ -11,6 +11,11 @@
 		{"id":"BCJ257","title":"Get the sexy beach look","img":"/images/sample2.jpg","off":10,"price":35.25},
 		{"id":"BCJ257","title":"Get the sexy beach look","img":"/images/sample3.jpg","off":12,"price":10}
 	],
+	"slides": [
+		{"id":"BCJ257","subtitle":"Get the sexy beach look","img":"/images/sample2.jpg"},
+		{"id":"BCJ257","subtitle":"Get the sexy beach look slide 2","img":"/images/sample1.jpg"},
+		{"id":"BCJ257","subtitle":"Get the sexy beach look slide 3","img":"/images/sample3.jpg"}
+	],
 	"offers":[
 		{"id":"BCJ257","title":"Charming dress1","subtitle":"Get the sexy beach look","img":"/images/sample1.jpg","off":15,"price":22.99},
 		{"id":"BCJ257","title":"Suburban2","subtitle":"Get the sexy beach look","img":"/images/sample2.jpg","off":15,"price":22.99},
