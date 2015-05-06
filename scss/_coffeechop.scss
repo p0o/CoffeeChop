@@ -7,6 +7,8 @@ $cc-blue: #2bb0e7;
 
 // global settings
 $body-bg: $cc-gray !default;
+$h1-font-size: rem-calc(24)!important;
+$label-font-sizing: rem-calc(14);
 
 // grid settings
 $row-width: rem-calc(1200);
@@ -51,15 +53,17 @@ $topbar-dropdown-toggle-color: $cc-black;
 
 
 // General styles
-span.label {
-  font-size: rem-calc(14) ;
+span.label.cc-price {
   display:block !important;
-  width:rem-calc(80);
+  width:rem-calc(100);
   margin:rem-calc(10) auto;
 }
 .cc-white-bg {
   background: $cc-white;
   overflow: hidden;
+}
+h1.cc-site-name a {
+  font-size:rem-calc(20);
 }
 
 

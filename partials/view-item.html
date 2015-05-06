@@ -36,10 +36,10 @@
 						<a class="button radius" ng-click="add2Cart()">Add to cart</a>
 					</div>
 				</div>
-				<span class="label secondary with-off" ng-show="hasOff">
+				<span class="label secondary with-off cc-price" ng-show="hasOff">
 					${{(item.price * piecesOrdered).toFixed(2)}}
 				</span>
-				<span class="label secondary round">
+				<span class="label secondary round cc-price">
 					${{ (getFinalPrice() * piecesOrdered).toFixed(2) }}
 				</span>
 				<p>{{item.description}}</p>
