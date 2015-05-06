@@ -1,5 +1,7 @@
 var cchopControllers = angular.module('cchopControllers',[]);
-
+/**
+* CoffeeChop frontpage controller
+*/
 cchopControllers.controller('FrontpageCtrl', ['$scope' ,'$http','$location',
  function($scope,$http,$location) {
 	$http.get('data/frontpage.json').success(function(data){
@@ -7,14 +9,16 @@ cchopControllers.controller('FrontpageCtrl', ['$scope' ,'$http','$location',
 		$scope.offs = data.offs;
 		$scope.offers = data.offers;
 		$scope.slides = data.slides;
-
-
 	});
 	$scope.goToItem = function(id) {
 		$location.url('/item/'+id);
 	}
 }]);
 
+/**
+* CoffeeChop View item controller
+* @namespace Item
+*/
 cchopControllers.controller('ViewItemCtrl',['$scope','$http','$routeParams','item_feed_value','shoppingCart',
  function($scope,$http,$routeParams,feedTemplateURL,shoppingCart){
  	var url = null;
@@ -22,11 +26,17 @@ cchopControllers.controller('ViewItemCtrl',['$scope','$http','$routeParams','ite
  	$scope.hasOff = false;
  	// initilize default order piece
  	$scope.piecesOrdered = 1;
+ 	$scope.colorBtn = {};
+ 	$scope.sizeBtn = {};
 
- 	// Add to Cart
+ 	/**
+	* Adding items to shopping cart
+	* This method will prepare info and send it to shoppingCart factory
+	* @memberOf Item
+	*/
  	$scope.add2Cart = function() {
  		var sCart = {};
- 		// Sending ordered values to shopping cart
+ 		// Preparing ordered item's features and sending it to shoppingCart
  		for (var index in $scope.sizeBtn)
  			if ($scope.sizeBtn[index]) sCart.size = index;
  		for (var index in $scope.colorBtn)
@@ -42,31 +52,72 @@ cchopControllers.controller('ViewItemCtrl',['$scope','$http','$routeParams','ite
  		shoppingCart.add2Cart(sCart);
  		$('#cartModal').foundation('reveal', 'open');
  	}
+ 	/**
+	* Closing the modal the apeared after adding to cart
+	* @memberOf Item
+	*/
  	$scope.closeModal = function() {
  		$('#cartModal').foundation('reveal', 'close');
  	}
- 	// Size selector ON/OFF buton
- 	$scope.sizeBtn = {};
+ 	/**
+	* Handling Size feature - On/Off buttons
+	* should be refactored to a directive soon 
+	* @memberOf Item
+	* @param {String} size - Size name like (medium,large etc)
+	*/
  	$scope.sizeBtnToggle = function(size) {
  		var currentBtnValue = $scope.sizeBtn[size];
  		_turnoff($scope.sizeBtn);
  		$scope.sizeBtn[size] = !currentBtnValue;
  	}
- 	// Color selector ON/OFF button
- 	$scope.colorBtn = {};
+ 	/**
+	* Handling Color feature - On/Off buttons
+	* should be refactored to a directive soon 
+	* @memberOf Item
+	* @param {String} color - Color code in rgb format (e.g #ffffff)
+	*/
  	$scope.colorBtnToggle = function(color) {
  		var currentBtnValue = $scope.colorBtn[color];
  		_turnoff($scope.colorBtn);
  		$scope.colorBtn[color] = !currentBtnValue;
  	}
- 	// Turn off button groups ( size and color)
+ 	/**
+	* Turning off all buttons
+	* Used by {@link colorBtnToggle} and {@link sizeBtnToggle} features to turn off buttons 
+	* when a new button is slected.
+	* should be refactored to a directive soon.
+	* @memberOf Item
+	* @param {Object}
+	*/
  	var _turnoff = function(btnObject) {
  		for (index in btnObject)
  			btnObject[index] = false;
  	}
+ 	/**
+	* Used to view images in larger size by user
+	* @memberOf Item
+	* @param {String} imageAddr - The full or relative address of image resource
+	*/
+	$scope.changeImage = function(imageAddr) {
+		$scope.selectedImage = imageAddr;
+	}
+	/**
+	* Calculate the price with possible discounts for view.
+	* @memberOf Item
+	*/
+	$scope.getFinalPrice = function() {
+		var data = $scope.item;
+		if ($scope.hasOff) {
+			var price = data.price * (1 - (data.off/100));
+			return price.toFixed(2);
+		}
+		else
+			return data.price;
+	}
  	// Generating JSON data URL
  	// [PRODUCTID] is a placeholder for item's ID
  	url = feedTemplateURL.replace('[PRODUCTID]',$scope.itemId);
+ 	// Loading JSON
  	$http.get(url).success(function(data) {
  		$scope.item = data;
  		// Informing the view that data is loaded now
@@ -77,23 +128,12 @@ cchopControllers.controller('ViewItemCtrl',['$scope','$http','$routeParams','ite
  		$scope.item.images = data.img.split('|');
  		// Image settings
  		$scope.selectedImage = $scope.item.images[0];
- 		$scope.changeImage = function(imageAddr) {
- 			$scope.selectedImage = imageAddr;
- 		}
+
  		// Calculate discount if it's not zero
  		data.off = parseInt(data.off);
  		data.price = parseFloat(data.price);
  		if (data.off !== 0) 
  			$scope.hasOff = true;
-
- 		$scope.getFinalPrice = function() {
- 			if ($scope.hasOff) {
- 				var price = data.price * (1 - (data.off/100));
- 				return price.toFixed(2);
- 			}
- 			else
- 				return data.price;
- 		}	
  	});
 }]);
 

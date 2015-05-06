@@ -6,8 +6,10 @@ written by Pooria Attarzadeh - github.com/p0o
 var cchopApp = angular.module('cchopApp',
 	['ngRoute','cchopControllers','cchopServices','cchopAnimations','slick']);
 
-// App URL routes
-cchopApp.config(['$routeProvider','$locationProvider',function($routeProvider, $locationProvider){
+/**
+* CoffeeChop URLs routes
+*/
+cchopApp.config(['$routeProvider',function($routeProvider){
 
 	$routeProvider.
 	 when('/frontpage',{
@@ -30,14 +32,19 @@ cchopApp.config(['$routeProvider','$locationProvider',function($routeProvider, $
 	 	templateUrl: 'partials/view-cart.html',
 	 	controller: 'ViewCartCtrl'
 	 }).
+	 when('/contact', {
+	 	templateUrl: 'partials/view-contact.html'
+	 }).
 	 otherwise({
 		redirectTo: '/frontpage'
 	});
 
-	//$locationProvider.html5Mode(true);
 }]);
 
-// Feeds used to load data
-cchopApp.value('frontpage_feed_value',  '/data/frontpage.json?ii=3');
+/**
+* CoffeeChop Feeds address - you can change them anto any files that will
+* generate the expected JSON output.
+*/
+cchopApp.value('frontpage_feed_value',  '/data/frontpage.json');
 cchopApp.value('list_feed_value',       '/data/products.json');
 cchopApp.value('item_feed_value',       '/data/item_[PRODUCTID].json');

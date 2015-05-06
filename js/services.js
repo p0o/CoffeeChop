@@ -1,6 +1,6 @@
 var cchopServices = angular.module('cchopServices',[]);
 
-// Loding list feed 
+// Loading list feed 
 cchopServices.factory('list',['$http','list_feed_value',
  function listFactory($http,feedURL) {
  	var listData = $http.get(feedURL).success(function(data){
