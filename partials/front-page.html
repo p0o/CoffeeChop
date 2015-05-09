@@ -1,5 +1,5 @@
 <!-- =============== Frontpage Controller Template =============== -->
-<div class="row medium-collapse">
+<div class="row small-collapse">
   <div class="medium-5 columns">
     <div class="row collapse" >
       <!-- offer-x block -->
@@ -36,8 +36,9 @@
               <!-- offer-special slide block end-->
             </div>
           </div>
-          <!-- offer-y one block -->
-          <div class="large-4 medium-6 small-12 columns cc-box offer-y" ng-click="goToItem(offers[0].id)">
+          <!-- offer-y one block - Hidden for small view -->
+          <div class="large-4 medium-6 small-12 columns hide-for-small-only cc-box offer-y" 
+          ng-click="goToItem(offers[0].id)">
             <div class="row">
               <div class="holder">
                 <img ng-src="{{offers[0].img}}">
@@ -61,6 +62,17 @@
             </div>
           </div>
           <!-- offer block end -->
+          <!-- offer-y one block - Show only for small view -->
+          <div class="small-6 columns show-for-small-only cc-box offer-y" 
+          ng-click="goToItem(offers[0].id)">
+            <div class="row">
+              <div class="holder">
+                <img ng-src="{{offers[0].img}}">
+                <span class="cc-label">{{offers[0].title}} - {{offers[0].price}} USD</span>
+              </div>
+            </div>
+          </div>
+          <!-- offer-y one block -->
         </div>
         
       </div>

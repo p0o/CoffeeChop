@@ -1,15 +1,18 @@
 <div class="row collapse">
 	<div class="large-9 columns">
 		<div class="row columns cc-item collapse" ng-show="dataIsLoaded">
-			<div class="small-4 columns">
+			<div class="medium-4 columns">
+				<div class="off-label show-for-small-only"><span>{{item.off}}%</span><span class="off">OFF</span></div>
 				<u>
 					<li class="imagebox"><img ng-src="{{selectedImage}}"></li>
-					<li class="imagebox" ng-repeat="image in item.images" ng-click="changeImage(image)"><img ng-src="{{image}}"></li>
+					<li class="imagebox" ng-repeat="image in item.images" ng-click="changeImage(image)">
+						<img ng-src="{{image}}">
+					</li>
 				</u>
 				
 			</div>
-			<div class="small-8 columns content" >
-				<div class="off-label"><span>{{item.off}}%</span><span class="off">OFF</span></div>
+			<div class="medium-8 columns content">
+				<div class="off-label hide-for-small-only"><span>{{item.off}}%</span><span class="off">OFF</span></div>
 				<h2>{{item.title}}</h2>
 				<h5>{{item.subtitle}}</h5>
 				<div class="row">
@@ -50,16 +53,13 @@
 	</div>
 </div>
 
-<!-- Size Classes: [small medium large xlarge expand] -->
 
-<div id="cartModal" class="reveal-modal medium" data-reveal>
+<div id="cartModal" class="reveal-modal small" data-reveal>
   <h2>Thank you!</h2>
   <p class="lead">Item has been added to your cart succesfully</p>
   <p>Thanks for your interest, now you can finalize your payment or continue shopping.</p>
-  <!-- Button Group Optional Classes: [radius round] -->
+
   <ul class="button-group">
-    <!-- Button Color Classes: [secondary alert success] -->
-    <!-- Button Size Classes: [tiny small large] -->
     <li><a href="#/cart" class="button secondary" ng-click="closeModal()">Buy Now</a></li>
     <li><a href="#/item/{{itemId}}" class="button" ng-click="closeModal()">Continue shopping</a></li>
   </ul>

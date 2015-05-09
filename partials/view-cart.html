@@ -1,35 +1,37 @@
 
-<table class="cc-cart-table">
-  <thead>
-    <tr>
-      <th>Product</th>
-      <th width="300">Title</th>
-      <th width="100">Size</th>
-      <th width="150">Color</th>
-      <th width="150">Pieces</th>
-      <th width="150">Price</th>
-      
-    </tr>
-  </thead>
-  <tbody>
-    <tr ng-repeat="order in shoppingCart" >
-      <td><div class="img-holder"><img ng-src="{{ order.img }}"></div></td>
-      <td><a href="#/item/{{order.id}}">{{ order.title }}</a></td>
-      <td>{{ order.size }}</td>
-      <td>
-      	<a class="button cc-color tiny secondary" style="background-color:{{ order.color }}"></a>
-      </td>
-      <td>{{ order.pieces }}</td>
-      <td>${{ order.price }}</td>
-    </tr>
-  </tbody>
-</table>
+<div class="row" ng-show="shoppingCart.length">
+  <table class="cc-cart-table" width="100%" >
+    <thead>
+      <tr>
+        <th>Product</th>
+        <th>Title</th>
+        <th>Size</th>
+        <th>Color</th>
+        <th>Pieces</th>
+        <th>Price</th>
+        
+      </tr>
+    </thead>
+    <tbody>
+      <tr ng-repeat="order in shoppingCart" >
+        <td><div class="img-holder"><img ng-src="{{ order.img }}"></div></td>
+        <td><a href="#/item/{{order.id}}">{{ order.title }}</a></td>
+        <td>{{ order.size }}</td>
+        <td>
+        	<a class="button cc-color tiny secondary" style="background-color:{{ order.color }}"></a>
+        </td>
+        <td>{{ order.pieces }}</td>
+        <td>${{ order.price }}</td>
+      </tr>
+    </tbody>
+  </table>
 
-<table class="cc-cart-result-table">
-    	<thead>
-    		<tr><th width="300">Total Price</th></tr>
-    	</thead>
-    	<tbody>
-    		<tr><td>{{cartTotalPrice}}</td></tr>
-    	</tbody>
-</table>
+  <table class="cc-cart-result-table">
+      	<thead>
+      		<tr><th width="300">Total Price</th></tr>
+      	</thead>
+      	<tbody>
+      		<tr><td>{{cartTotalPrice}}</td></tr>
+      	</tbody>
+  </table>
+</div>
