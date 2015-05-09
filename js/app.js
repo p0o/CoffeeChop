@@ -6,7 +6,7 @@ written by Pooria Attarzadeh - github.com/p0o
 var cchopApp = angular.module('cchopApp',
 	['ngRoute','cchopControllers','cchopServices','cchopAnimations','slick']);
 
-/**
+/*
 * CoffeeChop URLs routes
 */
 cchopApp.config(['$routeProvider',function($routeProvider){
@@ -41,7 +41,7 @@ cchopApp.config(['$routeProvider',function($routeProvider){
 
 }]);
 
-/**
+/*
 * CoffeeChop Feeds address - you can change them anto any files that will
 * generate the expected JSON output.
 */

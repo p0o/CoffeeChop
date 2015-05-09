@@ -101,25 +101,26 @@ cchopControllers.controller('ViewItemCtrl',['$scope','$http','$routeParams','ite
 	$scope.changeImage = function(imageAddr) {
 		$scope.selectedImage = imageAddr;
 	}
-	/**
-	* Calculate the price with possible discounts for view.
-	* @memberOf Item
-	*/
-	$scope.getFinalPrice = function() {
-		var data = $scope.item;
-		if ($scope.hasOff) {
-			var price = data.price * (1 - (data.off/100));
-			return price.toFixed(2);
-		}
-		else
-			return data.price;
-	}
+	
  	// Generating JSON data URL
  	// [PRODUCTID] is a placeholder for item's ID
  	url = feedTemplateURL.replace('[PRODUCTID]',$scope.itemId);
  	// Loading JSON
  	$http.get(url).success(function(data) {
  		$scope.item = data;
+ 		/**
+		* Calculate the price with possible discounts for view.
+		* @memberOf Item
+		*/
+		$scope.getFinalPrice = function() {
+			var data = $scope.item;
+			if ($scope.hasOff) {
+				var price = data.price * (1 - (data.off/100));
+				return price.toFixed(2);
+			}
+			else
+				return data.price;
+		}
  		// Informing the view that data is loaded now
  		$scope.dataIsLoaded=true;
  		// Seperate sizes, images and colors from string to Arrays
@@ -128,7 +129,6 @@ cchopControllers.controller('ViewItemCtrl',['$scope','$http','$routeParams','ite
  		$scope.item.images = data.img.split('|');
  		// Image settings
  		$scope.selectedImage = $scope.item.images[0];
-
  		// Calculate discount if it's not zero
  		data.off = parseInt(data.off);
  		data.price = parseFloat(data.price);
@@ -141,6 +141,7 @@ cchopControllers.controller('ViewItemCtrl',['$scope','$http','$routeParams','ite
 // Dependency Injected 'list' is a provider in services.js
 cchopControllers.controller('ViewListCtrl',['$scope','$http','$routeParams','list','$location',
  function($scope,$http,$routeParams,list,$location) {
+ 	$scope.filteredList= [];
  	if ($routeParams.sortType === undefined)
  		$location.url($location.url() + '/sort/newest');
  	// Just for sending sortType to view
@@ -168,8 +169,15 @@ cchopControllers.controller('ViewListCtrl',['$scope','$http','$routeParams','lis
  		$location.url('item/'+id);
  	}
 
+ 	$scope.isSort = function(arg) {
+ 		if ($scope.sortType === arg) 
+ 			return true;
+ 		else
+ 			return false;
+ 	}
+
  	// Re-run foundation initialization to activate Mangellan addon script
- 	$(document).foundation();
+ 	setTimeout(function() { $(document).foundation(); },100);
 
  	
 }]);
