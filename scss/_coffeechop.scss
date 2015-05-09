@@ -27,11 +27,14 @@ $topbar-margin-bottom: 30px;
 $topbar-link-bg: $cc-white !default;
 $topbar-link-bg-hover: lighten($cc-gray,5) !default;
 $topbar-link-bg-color-hover: $cc-black !default;
+$topbar-dropdown-bg: $cc-white;
 $topbar-dropdown-link-color: $cc-black !default;
 $topbar-dropdown-link-color-hover: $cc-black !default;
 $topbar-dropdown-link-bg: $cc-white !default;
-$topbar-dropdown-link-bg-hover: lighten($cc-gray,5) !default;
+$topbar-dropdown-link-bg-hover: lighten($cc-gray,5%) !default;
 $topbar-dropdown-toggle-color: $cc-black;
+$topbar-menu-link-color: $cc-black;
+$topbar-menu-icon-color: $cc-black;
 
 // mixins
 
@@ -79,7 +82,7 @@ h1.cc-site-name a {
 	font-size: rem-calc(15);
 
 	h3.header-text {
-	  margin-top: rem-calc(10);
+	  margin: rem-calc(10);
 	  font-size: rem-calc(18);
 	  text-transform: uppercase;
 	  height: rem-calc(20);
@@ -182,7 +185,7 @@ h1.cc-site-name a {
 // left list which will disapear in small screens
 .cc-list {
   background: $cc-white;
-  height: rem-calc(500);	
+  //height: rem-calc(500);	
   border-right: rem-calc(1) solid lighten($cc-black,90%);
   // Category list header
   #list-header {
@@ -442,7 +445,7 @@ h1.cc-site-name a {
     background-color: darken($cc-gray,15%);
   }
   .cc-tag.selected {
-    background-color: $cc-blue;
+    background-color: $cc-blue!important;
     color: $cc-white;
   }
   .cc-tag.selected:hover {
