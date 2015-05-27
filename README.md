@@ -4,6 +4,9 @@ A simple but elegant AngularJS single page app suitable for small online shoppin
 
 You can change feeds url and parameters easily in /js/app.js file.
 
+# Demo
+http://pooria.co/coffeechop
+
 ## Dependencies
 
   * Angular JS
